@@ -3,6 +3,5 @@
 <!-- End Footer Section -->
 
 <?php wp_footer(); ?>
-
 </body>
 </html>
