@@ -20,7 +20,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zimbabwe Land Commission</title>
+    <title>
+        <?php echo esc_attr(get_bloginfo('name')); ?> | <?php echo esc_attr(get_bloginfo('description')); ?>
+    </title>
     <?php wp_head(); ?>
 </head>
 <body>
@@ -38,24 +40,42 @@
     <div class="main__menu">
         <div class="main__menu--container row">
             <div class="main__logo">
-                <a class="main__menu--logo" href="#">
-                    <img src="./img/logox.png" alt="ZLC Logo">
-                </a>
+                <?php
+                if (has_custom_logo()) {
+                    the_custom_logo();
+                } else {
+                    echo '<h4>' . get_bloginfo('name') .'</h4>';
+                }
+                ?>
             </div>
             <nav>
-                <ul class="menu">
-                    <li><a class="menu__links" href="#">Home</a></li>
-                    <li><a class="menu__links" href="#">About Us</a></li>
-                    <li><a class="menu__links" href="#">Media</a></li>
-                    <li><a class="menu__links" href="#">Documents</a></li>
-                    <li><a class="menu__links" href="#">Contact Us</a></li>
-                </ul>
+                <?php wp_nav_menu(
+                    array(
+                        'menu'  => 'primary-menu',
+                        'container' => false, 
+                    )
+                );?>
             </nav>
+            <div class="mobile__menu">
+                <button class="mobile__menu--nav">Menu</button>
+            </div>
             <div class="social__links">
                 <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Youtube</a></li>
+                    <li>
+                        <a href="#">
+                            <img src="<?php echo bloginfo('template_url'); ?>/img/facebook.png" alt="facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="<?php echo bloginfo('template_url'); ?>/img/twitter.png" alt="facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="<?php echo bloginfo('template_url'); ?>/img/youtube.png" alt="facebook">
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>

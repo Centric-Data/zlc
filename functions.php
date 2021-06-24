@@ -35,4 +35,74 @@ function loadJS()
     wp_enqueue_script('landsjs');
 }
 add_action('wp_enqueue_scripts', 'loadJS');
+
+/**
+ * Essential theme supports
+ * 
+ * @return array
+ */
+function lsThemeSetup()
+{
+    // automatic feed link
+    add_theme_support('automatic-feed-links');
+    // tag title
+    add_theme_support('title-tag');
+    // post formats
+    $post_formats = array(
+        'aside',
+        'image',
+        'gallery',
+        'video',
+        'audio',
+        'link',
+        'quote',
+        'status'
+    );
+    add_theme_support('post-formats', $post_formats);
+    // post thumbnail
+    add_theme_support('post-thumbnails');
+    // HTML5 support
+    add_theme_support('html5', array('comment-list','comment-form','search-form','gallery','caption'));
+    // refresh widget
+    add_theme_support('customize-selective-refresh-widgets');
+    // custom background
+    $bg_defaults = array(
+        'default-image' => '',
+        'default-preset'    => 'default',
+        'default-size'      => 'cover',
+        'default-repeat'    => 'no-repeat',
+        'default-attachment'    => 'scroll',
+    );
+    add_theme_support('custom-background', $bg_defaults);
+    // custom header
+    add_theme_support('custom-header');
+    // custom logo
+    add_theme_support(
+        'custom-logo', array(
+        'height'    => 175,
+        'width'     => 156,
+        'flex-width' => true,
+        'flex-height' => true,
+        'header-text'   => array('site-title','site-description'),
+        )
+    );
+}
+add_action('after_setup_theme', 'lsThemeSetup');
+
+/**
+ * Register Menus
+ * 
+ * @return array
+ */
+function lsMenus()
+{
+    register_nav_menus(
+        array(
+            'top-menu'  => __('Right Top Menu'),
+            'primary-menu'  => __('Primary Menu')
+        )
+    );
+}
+add_action('init', 'lsMenus');
+
 ?>

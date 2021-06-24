@@ -24,8 +24,13 @@ body{
             .menu{
                 display: flex;
                 flex-direction: column;
+                align-items: center;
+                margin: 5px 0;
             }
         }
+    }
+    .mobile__menu{
+        display: block;
     }
 }
 
@@ -35,7 +40,7 @@ body{
     padding: 0 5px;
 }
 .header{
-    margin-bottom: 120px;
+    margin-bottom: 145px;
 }
 .top__nav{
     display: block;
@@ -64,7 +69,7 @@ body{
     }
 }
 .main__menu{
-    height: 80px;
+    //height: 80px;
     position: fixed;
     top: 40px;
     border-bottom: 1px solid #E5E8EB;
@@ -84,7 +89,7 @@ body{
             display: flex;
             li{
                 list-style: none;
-                margin: 0 5px;
+                margin: 0 20px;
             }
         }
         .menu{
@@ -93,4 +98,20 @@ body{
             font-size: .9em;
         }
     }
+    .main__logo{
+        padding: 5px;
+        img{
+            width: 100px;
+            height: auto;
+        }
+    }
+}
+.social__links{
+    img{
+        width: 32px;
+        height: 32px;
+    }
+}
+.mobile__menu{
+    display: none;
 }
