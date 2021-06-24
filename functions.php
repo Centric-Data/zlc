@@ -20,7 +20,9 @@
 function loadCSS()
 {
     wp_register_style('landscss', get_template_directory_uri().'/css/lands.css', array(), false, 'all');
+    wp_register_style('materialfonts', 'https://fonts.googleapis.com/icon?family=Material+Icons', array(), false, 'all');
     wp_enqueue_style('landscss');
+    wp_enqueue_style('materialfonts');
 }
 add_action('wp_enqueue_scripts', 'loadCSS');
 

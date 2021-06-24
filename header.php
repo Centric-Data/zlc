@@ -31,6 +31,7 @@
     <div class="top__nav">
         <div class="top__nav--container row">
             <ul class="top__nav--menu">
+                <li><a class="top__nav--links" href="#"><span class="material-icons">search</span></a></li>
                 <li><a class="top__nav--links" href="#">Submit Form</a></li>
                 <li><a class="top__nav--links" href="#">ZLC Portal</a></li>
                 <li><a class="top__nav--links" href="#">Sign-Up Newsletter</a></li>

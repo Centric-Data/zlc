@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+:root{
+    --greenColor: #2e9e46;
+    --redColor: #ee1f29;
+    --goldColor: #fece03;
+}
 
 *,html{
     margin: 0;
@@ -39,8 +46,11 @@ body{
     margin: 0 auto;
     padding: 0 5px;
 }
+
+/* Header Section CSS */
+
 .header{
-    margin-bottom: 145px;
+    margin-bottom: 144px;
 }
 .top__nav{
     display: block;
@@ -67,15 +77,19 @@ body{
             }
         }
     }
+    &--links{
+        display: flex;
+    }
 }
 .main__menu{
     //height: 80px;
     position: fixed;
     top: 40px;
-    border-bottom: 1px solid #E5E8EB;
+    // border-bottom: 1px solid #E5E8EB;
     width: 100%;
     z-index: 1;
     background-color: #fff;
+    box-shadow: 5px -2px 5px #000;
     &--container{
         height: 100%;
         display: flex;
@@ -115,3 +129,77 @@ body{
 .mobile__menu{
     display: none;
 }
+
+/* End Header Section CSS */
+
+/* Slider Section CSS */
+.slider{
+    &__wrapper{
+        height: 600px;
+    }
+    &__hero{
+        &--img{
+            height: 600px;
+            img{
+                height: 600px;
+            }
+        }
+        &--desc{
+            width: 100%;
+            max-width: 1200px;
+            margin: -550px auto 0 auto;
+        }
+        &--caption{
+            min-height: 365px;
+            opacity: 0.9;
+            min-width: 486px;
+            max-width: 50px;
+            padding: 45px 30px 70px 50px;
+            border-radius: 0 50px;
+            background-color: var(--redColor);
+            color: #fff;
+        }
+        &--caption-info{
+            h2{
+                font-size: 35px;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-bottom: 5px;
+                line-height: 1.4;
+            }
+            p{
+                font-size: 18px;
+                line-height: 1.4;
+                margin-bottom: 1em;
+            }
+        }
+        &--controls{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            a{
+                text-decoration: none;
+                color: #fff;
+            }
+            .readmore{
+                border: 1px solid #fff;
+                padding: .5em;
+                font-weight: 500;
+            }
+        }
+        &--buttons{
+            display: flex;
+            gap: 2em;
+            .left__control, .right__control{
+                padding: 5px;
+                width: 36px;
+                height: 36px;
+                &:hover{
+                    background-color: #000;
+                    border-radius: 50px;
+                }
+            }
+        }
+    }
+}
+/* End Slider Section CSS */
