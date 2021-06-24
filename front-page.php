@@ -1,21 +1,26 @@
+<?php
+
+/**
+ * Homepage structure
+ * Homepage 
+ * php version 7.3
+ * 
+ * @category Homepage
+ * @package  Centric
+ * @author   Centric Data <projects@centricdata.net>
+ * @license  http://www.gnu.org/licenses/gpl-3.0.html GPL 
+ * @link     http://www.gnu.org/licenses/gpl-3.0.html
+ */
+?>
+
 <?php get_header(); ?>
 
 <!-- Main Layout -->
 <div class="wrapper">
 <!-- Carousel Section -->
-    <section>
-        <div class="wrapper__slider">
-            <div class="slider__ob">
-                <div class="slider__ob--img">
-                    <div class="desc"></div>
-                </div>
-                <div class="slider__ob--controls">
-                    <button>Left</button>
-                    <button>Right</button>
-                </div>
-            </div>
-        </div>
-    </section>
+    <?php
+        get_template_part('includes/section', 'slider');
+    ?>
 <!-- End Carousel Section -->
 </div>
 <!-- End Main Layout -->
