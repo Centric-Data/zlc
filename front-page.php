@@ -22,6 +22,11 @@
         get_template_part('includes/section', 'slider');
     ?>
 <!-- End Carousel Section -->
+<!-- Top Quicklinks Section -->
+    <?php
+        get_template_part('includes/section', 'quicklinks');
+    ?>
+<!-- End QuicklinksSection -->
 </div>
 <!-- End Main Layout -->
 
