@@ -27,6 +27,11 @@
         get_template_part('includes/section', 'quicklinks');
     ?>
 <!-- End QuicklinksSection -->
+<!-- Statistics Section -->
+    <?php
+        get_template_part('includes/section', 'stats');
+    ?>
+<!-- End Statistics Section -->
 </div>
 <!-- End Main Layout -->
 

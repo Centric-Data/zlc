@@ -6,6 +6,7 @@
     --redColor: #ee1f29;
     --goldColor: #fece03;
     --textColor: #1F262C;
+    --mainBgColor: #F2F5F7;
 }
 
 *,html{
@@ -14,7 +15,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: antiquewhite;
+    background-color: var(--goldColor);
     font-family: 'Roboto', sans-serif;
 }
 
@@ -142,6 +143,7 @@ body{
 .slider{
     &__wrapper{
         height: 600px;
+        overflow: hidden;
     }
     &__hero{
         &--img{
@@ -314,3 +316,38 @@ body{
     cursor: pointer;
 }
 /* End Quicklinks Section CSS */
+
+/* Statistics CSS */
+.statistics{
+    &__title{
+        margin: 5px 0 35px 0;
+        font-weight: 500;
+        text-align: center;
+        line-height: 28px;
+        color: var(--textColor);
+        font-size: 1.5em;
+    }
+    &__items{
+        display: flex;
+        justify-content: space-between;
+        li{
+            list-style: none;
+            text-align: center;
+            border-radius: 150px;
+            // border: 1px solid #000;
+            padding: 50px;
+            width: 250px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--greenColor);
+            color: #fff;
+            gap: 1em;
+            h3{
+                font-size: 3em;
+            }
+        }
+    }
+}
