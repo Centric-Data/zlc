@@ -453,3 +453,23 @@ body{
     }
 }
 /*  End Posts Layout CSS */
+
+/* Footer CSS */
+.footer{
+    &__wrapper{
+        background-color: #000;
+        color: white;
+        padding: 2em;
+    }
+    &__layout{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__newsletter{
+        h2{
+            font-weight: 300;
+            margin-bottom: 1em;
+        }
+    }
+}
+/* End Footer CSS */
