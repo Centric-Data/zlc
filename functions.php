@@ -50,7 +50,7 @@ function lsThemeSetup()
     // tag title
     add_theme_support('title-tag');
     // post formats
-    $post_formats = array(
+    $post_formats = [
         'aside',
         'image',
         'gallery',
@@ -59,7 +59,7 @@ function lsThemeSetup()
         'link',
         'quote',
         'status'
-    );
+    ];
     add_theme_support('post-formats', $post_formats);
     // post thumbnail
     add_theme_support('post-thumbnails');
@@ -68,26 +68,28 @@ function lsThemeSetup()
     // refresh widget
     add_theme_support('customize-selective-refresh-widgets');
     // custom background
-    $bg_defaults = array(
+    $bg_defaults = [
         'default-image' => '',
         'default-preset'    => 'default',
         'default-size'      => 'cover',
         'default-repeat'    => 'no-repeat',
         'default-attachment'    => 'scroll',
-    );
+    ];
     add_theme_support('custom-background', $bg_defaults);
     // custom header
     add_theme_support('custom-header');
     // custom logo
     add_theme_support(
-        'custom-logo', array(
+        'custom-logo', [
         'height'    => 175,
         'width'     => 156,
         'flex-width' => true,
         'flex-height' => true,
         'header-text'   => array('site-title','site-description'),
-        )
+        ]
     );
+    // Adding custom image sizes to be used for post thumbnails & page images
+    add_image_size('card-thumb', 375, 250, true);
 }
 add_action('after_setup_theme', 'lsThemeSetup');
 
@@ -99,10 +101,10 @@ add_action('after_setup_theme', 'lsThemeSetup');
 function lsMenus()
 {
     register_nav_menus(
-        array(
+        [
             'top-menu'  => __('Right Top Menu'),
             'primary-menu'  => __('Primary Menu')
-        )
+        ]
     );
 }
 add_action('init', 'lsMenus');

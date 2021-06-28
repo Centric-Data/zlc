@@ -32,6 +32,11 @@
         get_template_part('includes/section', 'stats');
     ?>
 <!-- End Statistics Section -->
+<!-- News Section -->
+    <?php
+        get_template_part('includes/section', 'news');
+    ?>
+<!-- End News Section -->
 </div>
 <!-- End Main Layout -->
 

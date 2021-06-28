@@ -319,6 +319,9 @@ body{
 
 /* Statistics CSS */
 .statistics{
+    &__wrapper{
+        margin-bottom: 1em;
+    }
     &__title{
         margin: 5px 0 35px 0;
         font-weight: 500;
@@ -345,9 +348,108 @@ body{
             background-color: var(--greenColor);
             color: #fff;
             gap: 1em;
+            box-shadow: 0px 0px 10px #000;
             h3{
                 font-size: 3em;
             }
         }
     }
 }
+/* End Statistics CSS */
+
+/* News Section CSS */
+.news{
+    &__wrapper{
+        margin-top: 3em;
+        margin-bottom: 1em;
+        h4{
+            font-size: 1.6em;
+            font-weight: 400;
+            margin: 1em 0;
+        }
+        h5{
+            font-size: 1.2em;
+            font-weight: 600;
+            margin: 1em 0;
+            text-transform: uppercase;
+            color: #000;
+            letter-spacing: 2px;
+        }
+    }
+    &__items{
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    &__card{
+        background-color: var(--mainBgColor);
+        cursor: pointer;
+        box-shadow: 0px 0px 3px var(--textColor);
+        border-radius: 0px 30px 0 0;
+        &--img{
+            max-width: 375px;
+            max-height: 250px;
+            img{
+                width: 100%;
+                height: auto;
+                filter: grayscale(100);
+                border-radius: 0px 30px;
+                &:hover{
+                    filter: grayscale(0);
+                    transition: 0.3s ease-in-out;
+                }
+            }
+        }
+        a{
+            text-decoration: none;
+            color: var(--textColor);
+        }
+        article{
+            max-width: 375px;
+            // max-height: 540px;
+        }
+        &--content{
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            // height: 290px;
+            h4{
+                margin: .8em 0;
+                font-size: 1.3em;
+                font-weight: 400;
+            }
+            p{
+                // line-height: 1.4px;
+                font-weight: 300;
+                font-size: 1em;
+            }
+        }
+    }
+}
+.readmore__front{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    span{
+        padding: 5px;
+        border-radius: 50px;
+        background-color: var(--redColor);
+        color: #fff;
+    }
+}
+/* End News Section CSS */
+
+/*  Posts Layout CSS */
+.banner__wrapper{
+    height: 230px;
+    margin-bottom: 40px;
+    background-color: var(--greenColor);
+}
+.posts{
+    &__layout{
+        padding: 1em 2em;
+        background-color: var(--mainBgColor);
+    }
+}
+/*  End Posts Layout CSS */

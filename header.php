@@ -25,7 +25,7 @@
     </title>
     <?php wp_head(); ?>
 </head>
-<body>
+<body  <?php body_class(); ?> >
 <!-- Header Section -->
     <header class="header" role="banner">
     <div class="top__nav">
@@ -49,12 +49,12 @@
                 }
                 ?>
             </div>
-            <nav>
+            <nav role="navigation">
                 <?php wp_nav_menu(
-                    array(
+                    [
                         'menu'  => 'primary-menu',
                         'container' => false, 
-                    )
+                    ]
                 );?>
             </nav>
             <div class="mobile__menu">
