@@ -30,12 +30,18 @@
     <header class="header" role="banner">
     <div class="top__nav">
         <div class="top__nav--container row">
-            <ul class="top__nav--menu">
-                <li><a class="top__nav--links" href="#"><span class="material-icons">search</span></a></li>
-                <li><a class="top__nav--links" href="#">Submit Form</a></li>
-                <li><a class="top__nav--links" href="#">ZLC Portal</a></li>
-                <li><a class="top__nav--links" href="#">Sign-Up Newsletter</a></li>
-            </ul>
+            <div class="top__items">
+                <div class="search__wrapper">
+                    <?php get_search_form(); ?>
+                </div>
+                <div class="nav__wrapper">
+                    <ul class="top__nav--menu">
+                        <li><a class="top__nav--links" href="#">Submit Form</a></li>
+                        <li><a class="top__nav--links" href="#">ZLC Portal</a></li>
+                        <li><a class="top__nav--links" href="#">Sign-Up Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
     <div class="main__menu">
@@ -52,7 +58,7 @@
             <nav role="navigation">
                 <?php wp_nav_menu(
                     [
-                        'menu'  => 'primary-menu',
+                        'theme_location' => 'primary-menu',
                         'container' => false, 
                     ]
                 );?>

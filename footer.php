@@ -36,7 +36,7 @@
                 <nav role="navigation">
                     <?php wp_nav_menu(
                         [
-                            'menu'  => 'footer-menu',
+                            'theme_location'  => 'footer-menu',
                             'container' => false,
                             'container_class' => 'footer__nav',
                             'menu_class' => 'footer__nav',
