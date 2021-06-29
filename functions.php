@@ -102,8 +102,9 @@ function lsMenus()
 {
     register_nav_menus(
         [
-            'top-menu'  => __('Right Top Menu'),
-            'primary-menu'  => __('Primary Menu')
+            'top-menu'  => esc_html__('Right Top Menu'),
+            'primary-menu'  => esc_html__('Primary Menu'),
+            'footer-menu' => esc_html__('Footer Menu', 'lands')
         ]
     );
 }
