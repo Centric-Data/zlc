@@ -15,20 +15,8 @@
 
 <?php get_header(); ?>
 
-<section>
-    <div class="search__page sub-row">
-        <h4><?php echo esc_html__('Search results here', 'lands'); ?></h4>
-        <div class="search__results">
-            <ul>
-                <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-                <li>
-                    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-                </li>
-                <?php endwhile; else : ?>
-                <?php endif; ?>
-            </ul>
-        </div>
-    </div>
-</section>
+<?php
+    get_template_part('includes/section', 'searchresults');
+?>
 
 <?php get_footer(); ?>
