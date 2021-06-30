@@ -35,11 +35,17 @@
                     <?php get_search_form(); ?>
                 </div>
                 <div class="nav__wrapper">
-                    <ul class="top__nav--menu">
-                        <li><a class="top__nav--links" href="#">Submit Form</a></li>
-                        <li><a class="top__nav--links" href="#">ZLC Portal</a></li>
-                        <li><a class="top__nav--links" href="#">Sign-Up Newsletter</a></li>
-                    </ul>
+                    <nav role="navigation">
+                        <?php wp_nav_menu(
+                            [
+                                'theme_location'  => 'top-menu',
+                                'container' => false,
+                                'container_class' => 'top__nav--menu',
+                                'menu_class' => 'top__nav--menu',
+                                'items_wrap' => '<ul class="%2$s">%3$s</ul>' 
+                            ]
+                        );?>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -64,7 +70,7 @@
                 );?>
             </nav>
             <div class="mobile__menu">
-                <button class="mobile__menu--nav">Menu</button>
+                <button class="mobile__menu--nav"><span class="material-icons">menu</span></button>
             </div>
             <div class="social__links">
                 <ul>
