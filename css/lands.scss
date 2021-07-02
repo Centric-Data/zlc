@@ -38,20 +38,23 @@ body{
                     text-align: center;
                     width: 100%;
                     padding: 1em 0;
-                    border-bottom: 1px solid var(--textColor);
+                    // border-bottom: 1px solid var(--textColor);
                     a{
                         font-size: 1.5em;
                     }
                 }
             }
+            .open__mobile{
+                left: -100%;
+            }
             nav{
-                // display: none;
+                //display: block;
                 position: absolute;
                 width: 100%;
                 height: calc(100vh - 105px);
-                background-color: var(--goldColor);
+                background-color: #fece03e0;
                 top:105px;
-                left: -100%;
+                left: 0;
                 transition: 0.5s;
             }
             .social__links{
