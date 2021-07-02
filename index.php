@@ -1,7 +1,9 @@
 <?php
-
 /**
- * Nothing here to see
+ * Index file for you
+ *
+ * @package  Centric
  */
-    echo "Silence is golden!"
-?>
+
+	echo 'Silence is golden!';
+

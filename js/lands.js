@@ -1,1 +1,1 @@
-console.log('Hello DevMaster');
+console.log( 'Hello DevMaster' );

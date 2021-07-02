@@ -25,3 +25,5 @@ node_modules/
 composer.json
 composer.lock
 vendor*
+
+*.sh
