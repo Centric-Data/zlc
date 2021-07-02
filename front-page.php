@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Homepage structure
  * Homepage
@@ -11,6 +10,7 @@
  * @license  http://www.gnu.org/licenses/gpl-3.0.html GPL
  * @link     http://www.gnu.org/licenses/gpl-3.0.html
  */
+
 ?>
 
 <?php get_header(); ?>
