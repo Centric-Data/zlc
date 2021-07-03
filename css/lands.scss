@@ -20,7 +20,7 @@ body{
 }
 
 // Media Target <768px
-@media (max-width: 768px) {
+@media only screen and (min-device-width: 320px) and (max-width: 768px) {
     .main__menu{
         height: auto;
         &--container {
@@ -70,9 +70,51 @@ body{
             }
         }
     }
+
+    // Slider
+    .slider{
+        &__wrapper{
+            // overflow: unset;
+            width: 100%;
+        }
+        &__hero{
+            &--img{
+                width: 100%;
+            }
+        }
+    }
+    .fill{
+        width: 100%;
+        object-fit: cover;
+    }
+    .quicklinks{
+        &__wrapper{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .statistics{
+        &__items{
+            flex-direction: column;
+            align-items: center;
+            li{
+                margin: .8em 0;
+            }
+        }
+    }
+    .news{
+        &__items{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    #popular__form_download{
+        flex-direction: column;
+        gap: 8px;
+    }
 }
 
-@media (min-width: 769px) {
+@media screen and (min-width: 769px) {
     .mobile__menu{
         &--nav{
             display: none;
@@ -188,11 +230,12 @@ body{
 .slider{
     &__wrapper{
         height: 600px;
-        overflow: hidden;
+        // overflow: hidden;
     }
     &__hero{
         &--img{
             height: 600px;
+            overflow: hidden;
             img{
                 height: 600px;
             }
@@ -205,8 +248,7 @@ body{
         &--caption{
             min-height: 365px;
             opacity: 0.9;
-            min-width: 486px;
-            max-width: 50px;
+            max-width: 485px;
             padding: 45px 30px 70px 50px;
             border-radius: 0 50px;
             background-color: var(--redColor);
@@ -264,11 +306,12 @@ body{
         justify-content: space-between;
     }
     &__layout{
-        width: 588px;
+        width: 100%;
+        max-width: 588px;
         background-color: #fff;
         border-radius: 5px;
         box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.15);
-        overflow: hidden;
+        // overflow: hidden;
         top: -55px;
         position: relative;
     }
@@ -419,6 +462,7 @@ body{
             text-transform: uppercase;
             color: #000;
             letter-spacing: 2px;
+            text-align: center;
         }
     }
     &__items{
