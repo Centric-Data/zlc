@@ -62,7 +62,7 @@
 				}
 				?>
 			</div>
-			<nav role="navigation">
+			<nav class="open__mobile" role="navigation">
 				<?php
 				wp_nav_menu(
 					array(

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Insert slider on the top section
  * Slider
@@ -11,12 +10,13 @@
  * @license  http://www.gnu.org/licenses/gpl-3.0.html GPL
  * @link     http://www.gnu.org/licenses/gpl-3.0.html
  */
+
 ?>
 
 <section>
 		<div class="slider__wrapper">
 			<div class="slider__hero--img">
-				<img src="<?php echo bloginfo( 'template_url' ); ?>/img/slide01.jpg" alt="Harvestor">
+				<img class="fill" src="<?php echo bloginfo( 'template_url' ); ?>/img/slide01.jpg" alt="Harvestor">
 			</div>
 			<div class="slider__hero--desc">
 				<div class="slider__hero--caption">
