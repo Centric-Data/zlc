@@ -105,3 +105,32 @@ function ls_menus() {
 	);
 }
 add_action( 'init', 'ls_menus' );
+
+/**
+ * Add some breadcrumbs to header navigation.
+ *
+ * @return void
+ */
+function ls_breadcrumbs() {
+	echo '<ul class="page__breadcrumbs">';
+	echo '<li>';
+	echo '<a href="' . esc_url( home_url() ) . '" rel="nofollow">Home</a>';
+	if ( is_category() || is_single() ) {
+		echo '&nbsp;&nbsp;&#187;&nbsp;&nbsp;';
+		the_category( ' &bull; ' );
+		if ( is_single() ) {
+			echo ' &nbsp;&nbsp;&#187;&nbsp;&nbsp; ';
+			the_title();
+		}
+	} elseif ( is_page() ) {
+		echo '&nbsp;&nbsp;&#187;&nbsp;&nbsp;';
+		echo esc_attr( the_title() );
+	} elseif ( is_search() ) {
+		echo '&nbsp;&nbsp;&#187;&nbsp;&nbsp;Search Results for... ';
+		echo '"<em>';
+		echo esc_attr( the_search_query() );
+		echo '</em>"';
+	}
+	echo '</li>';
+	echo '</ul>';
+}

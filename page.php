@@ -20,13 +20,7 @@
 		<div class="banner__wrapper">
 			<div class="banner__wrapper--main sub-row">
 				<nav role="navigation">
-					<ul class="page__breadcrumbs">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">About</a></li>
-					</ul>
+					<?php ls_breadcrumbs(); ?>
 				</nav>
 				<div class="banner__content">
 					<div class="page__title">
