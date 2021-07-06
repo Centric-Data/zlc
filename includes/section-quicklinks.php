@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Section for quicklinks on the bottom of the hero section
  * Downloads

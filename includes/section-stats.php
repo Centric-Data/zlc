@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Statistics section showcasing the figures
  * Statistics
