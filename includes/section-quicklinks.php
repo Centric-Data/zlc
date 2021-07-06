@@ -11,9 +11,10 @@
  * @license  http://www.gnu.org/licenses/gpl-3.0.html GPL
  * @link     http://www.gnu.org/licenses/gpl-3.0.html
  */
+
 ?>
 
-<section>
+<section class="yellowbg">
 	<div class="quicklinks__wrapper sub-row">
 		<div class="quicklinks__layout">
 			<ul class="quicklinks__list">

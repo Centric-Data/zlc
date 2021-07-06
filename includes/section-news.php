@@ -25,7 +25,7 @@ $args = array(
 
 $query = new WP_Query( $args );
 ?>
-<section>
+<section class="yellowbg">
 	<div class="news__wrapper sub-row">
 		<h5>Latest Articles</h5>
 		<div class="news__items">

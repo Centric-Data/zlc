@@ -15,8 +15,11 @@
     box-sizing: border-box;
 }
 body{
-    background-color: var(--goldColor);
+    // background-color: var(--goldColor);
     font-family: 'Roboto', sans-serif;
+}
+.yellowbg{
+    background-color: var(--goldColor);
 }
 
 // Media Target <768px
@@ -112,6 +115,77 @@ body{
         flex-direction: column;
         gap: 8px;
     }
+    /* Page Layout */
+    .page{
+        &__layout{
+            padding: 1em;
+            background-color: #fff;
+        }
+        &__title{
+            padding: 1em;
+            background-color: var(--redColor);
+            border-radius: 0 25px 0 25px;
+            position: absolute;
+            max-width: 480px;
+            max-height: 120px;
+            // bottom: -15px;
+            h2{
+                font-weight: 500;
+                color: #fff;
+            }
+        }
+        &__social{
+            position: absolute;
+            right: 0;
+            // bottom: 5%;
+        }
+        &__breadcrumbs{
+            display: flex;
+            li{
+                list-style: none;
+                margin-right: .8em;
+                font-size: .9rem;
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+        }
+        &__social{
+            ul{
+                display: flex;
+                li{
+                    list-style: none;
+                    margin-right: 1em;
+                    a{
+                        text-decoration: none;
+                        color: #fff;
+                        img{
+                            width: 32px;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .banner{
+        &__wrapper{
+            height: 170px;
+            &--main{
+                padding: 1em;
+                display: flex;
+                flex-direction: column;
+                height: 90%;
+                justify-content: space-between;
+            }
+        }
+        &__content{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    /* End Page Layout */
 }
 
 @media screen and (min-width: 769px) {
@@ -408,10 +482,10 @@ body{
 /* Statistics CSS */
 .statistics{
     &__wrapper{
-        margin-bottom: 1em;
+        // margin-bottom: 1em;
     }
     &__title{
-        margin: 5px 0 35px 0;
+        margin: 0 0 35px 0;
         font-weight: 500;
         text-align: center;
         line-height: 28px;
@@ -448,8 +522,7 @@ body{
 /* News Section CSS */
 .news{
     &__wrapper{
-        margin-top: 3em;
-        margin-bottom: 1em;
+        padding: 3em 0;
         h4{
             font-size: 1.6em;
             font-weight: 400;
@@ -458,11 +531,11 @@ body{
         h5{
             font-size: 1.2em;
             font-weight: 600;
-            margin: 1em 0;
             text-transform: uppercase;
             color: #000;
             letter-spacing: 2px;
             text-align: center;
+            margin: 1em 0;
         }
     }
     &__items{
@@ -530,11 +603,6 @@ body{
 /* End News Section CSS */
 
 /*  Posts Layout CSS */
-.banner__wrapper{
-    height: 230px;
-    margin-bottom: 40px;
-    background-color: var(--greenColor);
-}
 .posts{
     &__layout{
         padding: 1em 2em;
@@ -678,3 +746,80 @@ footer{
     }
 }
 /* End Footer CSS */
+
+/* Page Layout */
+.page{
+    &__breadcrumbs{
+        display: flex;
+        li{
+            list-style: none;
+            margin:.8em .8em 0 0;
+            font-size: .9rem;
+            a{
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+    }
+    &__social{
+        position: absolute;
+        font-size: 12px;
+        bottom: 30px;
+        right: 0;
+        margin-top: 0;
+        ul{
+            display: flex;
+            li{
+                list-style: none;
+                margin-right: 1em;
+                a{
+                    color: #fff;
+                    img{
+                        width: 32px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+    &__title{
+        background-color: var(--redColor);
+        bottom: -40px;
+        min-height: 160px;
+        max-width: 40%;
+        line-height: 38px;
+        padding: 40px 78px 44px 78px;
+        border-radius: 0 45px 0 45px;
+        position: absolute;
+        h2{
+            font-weight: 600;
+            color: #fff;
+            font-size: 2em;
+        }
+    }
+}
+.banner{
+    &__wrapper{
+        padding-top: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 230px;
+        margin-bottom: 50px;
+        background-color: var(--greenColor);
+        &--main{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            max-height: 100%;
+            height: 100%;
+        }
+    }
+    &__content{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+}
+/* End Page Layout */
