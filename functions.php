@@ -107,7 +107,7 @@ function ls_menus() {
 add_action( 'init', 'ls_menus' );
 
 /**
- * Add some breadcrumbs to header navigation.
+ * Add some breadcrumbs to banner navigation.
  *
  * @return void
  */
