@@ -952,7 +952,34 @@ footer{
             form{
                 display: flex;
                 flex-direction: column;
+                input, textarea{
+                    margin-bottom: 1em;
+                    padding: 1em;
+                    outline: none;
+                    border-radius: 5px;
+                    border: 1px solid var(--textColor);
+                    &:focus{
+                        border: 1px solid var(--goldColor);
+                    }
+                }
+                button{
+                    padding: 1em;
+                    outline: none;
+                    border: none;
+                    background-color: var(--greenColor);
+                    color: #fff;
+                    border-radius: 5px;
+                    font-size: 1em;
+                    font-weight: 400;
+                    cursor: pointer;
+                }
             }
+        }
+        h3{
+            margin: 1em 0;
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #000;
         }
     }
 }
