@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Statistics section showcasing the figures
  * Statistics
@@ -11,9 +10,10 @@
  * @license  http://www.gnu.org/licenses/gpl-3.0.html GPL
  * @link     http://www.gnu.org/licenses/gpl-3.0.html
  */
+
 ?>
 
-<section>
+<section class="yellowbg">
 	<div class="statistics__wrapper sub-row">
 		<div class="statistics">
 			<p class="statistics__title">

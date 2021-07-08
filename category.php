@@ -1,6 +1,6 @@
 <?php
 /**
- * Single Page layout
+ * Category Page layout
  * Page
  * php version 7.3
  *
@@ -24,7 +24,7 @@
 				</nav>
 				<div class="banner__content">
 					<div class="page__title">
-						<h2><?php the_title(); ?></h2>
+						<h2><?php the_category( ', ' ); ?></h2>
 					</div>
 					<div class="page__social">
 					<ul>
@@ -53,7 +53,7 @@
 				<?php get_sidebar( 'popular' ); ?>
 			</div>
 			<div class="page__content">
-				<?php the_content(); ?>
+				<?php echo esc_html__( 'Category Items go here', 'lands' ); ?>
 			</div>
 		</div>
 	</div>

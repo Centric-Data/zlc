@@ -98,10 +98,39 @@ add_action( 'after_setup_theme', 'ls_themesetup' );
 function ls_menus() {
 	register_nav_menus(
 		array(
-			'top-menu'     => esc_html__( 'Right Top Menu' ),
-			'primary-menu' => esc_html__( 'Primary Menu' ),
+			'top-menu'     => esc_html__( 'Right Top Menu', 'lands' ),
+			'primary-menu' => esc_html__( 'Primary Menu', 'lands' ),
 			'footer-menu'  => esc_html__( 'Footer Menu', 'lands' ),
 		)
 	);
 }
 add_action( 'init', 'ls_menus' );
+
+/**
+ * Add some breadcrumbs to banner navigation.
+ *
+ * @return void
+ */
+function ls_breadcrumbs() {
+	echo '<ul class="page__breadcrumbs">';
+	echo '<li>';
+	echo '<a href="' . esc_url( home_url() ) . '" rel="nofollow">Home</a>';
+	if ( is_category() || is_single() ) {
+		echo '&nbsp;&nbsp;&#187;&nbsp;&nbsp;';
+		the_category( ' &bull; ' );
+		if ( is_single() ) {
+			echo ' &nbsp;&nbsp;&#187;&nbsp;&nbsp; ';
+			the_title();
+		}
+	} elseif ( is_page() ) {
+		echo '&nbsp;&nbsp;&#187;&nbsp;&nbsp;';
+		echo esc_attr( the_title() );
+	} elseif ( is_search() ) {
+		echo '&nbsp;&nbsp;&#187;&nbsp;&nbsp;Search Results for... ';
+		echo '"<em>';
+		echo esc_attr( the_search_query() );
+		echo '</em>"';
+	}
+	echo '</li>';
+	echo '</ul>';
+}
