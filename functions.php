@@ -98,8 +98,8 @@ add_action( 'after_setup_theme', 'ls_themesetup' );
 function ls_menus() {
 	register_nav_menus(
 		array(
-			'top-menu'     => esc_html__( 'Right Top Menu' ),
-			'primary-menu' => esc_html__( 'Primary Menu' ),
+			'top-menu'     => esc_html__( 'Right Top Menu', 'lands' ),
+			'primary-menu' => esc_html__( 'Primary Menu', 'lands' ),
 			'footer-menu'  => esc_html__( 'Footer Menu', 'lands' ),
 		)
 	);

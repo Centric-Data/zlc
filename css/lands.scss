@@ -881,3 +881,16 @@ footer{
 }
 
 /* End Page Layout */
+
+/* Contact Page Layout */
+.contact{
+    &__wrapper{
+        color: var(--textColor);
+        padding: 1em 2em;
+        margin-top: 10em;
+        margin-bottom: 1em;
+        background-color: var(--mainBgColor);
+    }
+}
+/* End Contact Page Layout */
+
