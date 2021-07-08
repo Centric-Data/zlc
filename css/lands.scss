@@ -890,6 +890,70 @@ footer{
         margin-top: 10em;
         margin-bottom: 1em;
         background-color: var(--mainBgColor);
+        h4{
+            font-size: 1.8em;
+            font-weight: 300;
+            text-align: center;
+            position: relative;
+            &::after{
+                content: "";
+                width: 3%;
+                border-bottom: 5px solid var(--goldColor);
+                display: block;
+                margin-top: 5px;
+                position: absolute;
+                left: 44%;
+            }
+        }
+        p{
+            margin: 2.5em 0;
+            text-align: center;
+        }
+    }
+    &__layout{
+        display: flex;
+        flex-direction: column;
+        &--top{
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}
+.top{
+    &__left{
+        flex-basis: 45%;
+        background-color: #fff;
+        padding: 1em 2em;
+        box-shadow: 0 4px 11px -5px rgba(0,0,0,.4);
+        h5{
+            padding: 1em 0 2em 0;
+            font-weight: 600;
+            font-size: 1.3em;
+            color: #000;
+        }
+        &--card{
+            .card--details{
+                margin-left: 2em;
+                p { 
+                    text-align: left;
+                    margin-top: 0;
+                    font-size: 1.2em;
+                    line-height: 1.4;
+                }
+            }
+            .card--info{
+                display: flex;
+            }
+        }
+    }
+    &__right{
+        flex-basis: 40%;
+        .form__wrapper{
+            form{
+                display: flex;
+                flex-direction: column;
+            }
+        }
     }
 }
 /* End Contact Page Layout */
