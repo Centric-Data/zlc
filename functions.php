@@ -134,3 +134,25 @@ function ls_breadcrumbs() {
 	echo '</li>';
 	echo '</ul>';
 }
+
+/**
+ * Add some breadcrumbs to banner navigation.
+ *
+ * @return void
+ */
+function ls_custom_admin_footer() {
+
+	add_filter( 'admin_footer_text', 'ls_edit_text', 11 );
+
+}
+
+/**
+ * Add some breadcrumbs to banner navigation.
+ *
+ * @return text
+ */
+function ls_edit_text( $footer ) {
+	$new_footer = str_replace( '.</span>', __( ' and <a href="https://centricdata.net">Centric Data</a>.</span>', 'contactlense' ), $footer );
+	return $new_footer;
+}
+add_action( 'admin_init', 'ls_custom_admin_footer', 10, 1 );
