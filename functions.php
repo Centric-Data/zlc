@@ -156,34 +156,3 @@ function ls_edit_text( $footer ) {
 	return $new_footer;
 }
 add_action( 'admin_init', 'ls_custom_admin_footer', 10, 1 );
-
-/**
- * Register Documents Post-Type
- *
- * @return void
- */
-function ls_download_form_post_type() {
-	$labels = array(
-		'name'           => _x( 'Documents', 'Post type general name', 'lands' ),
-		'singular'       => _x( 'Document', 'Post type singular name', 'lands' ),
-		'menu_name'      => _x( 'Documents', 'Admin Menu Text', 'lands' ),
-		'name_admin_bar' => _x( 'Document', 'Add New on Toolbar', 'lands' ),
-		'add_new'        => __( 'Add New', 'lands' ),
-		'add_new_item'   => __( 'Add New Document', 'lands' ),
-		'new_item'       => __( 'New Document' ),
-		'edit_item'      => __( 'Edit Document', 'lands' ),
-		'view_item'      => __( 'View Document', 'lands' ),
-		'all_items'      => __( 'All Documents', 'lands' ),
-	);
-	$args   = array(
-		'labels'          => $labels,
-		'public'          => true,
-		'has_archive'     => true,
-		'hierarchical'    => false,
-		'supports'        => array( 'title', 'editor' ),
-		'capability_type' => 'post',
-		'menu_icon'       => 'dashicons-text-page',
-	);
-	register_post_type( 'centric_documents', $args );
-}
-add_action( 'init', 'ls_download_form_post_type' );
