@@ -15,14 +15,9 @@
 
 <?php get_header(); ?>
 
-<section>
-	<div class="contact__wrapper sub-row">
-		<h4><?php the_title(); ?></h4>
-		<div class="contact__layout">
-			<div class="contact__layout--top"></div>
-			<div class="contact__layout--bottom"></div>
-		</div>
-	</div>
-</section>
+<?php
+	echo do_shortcode( ' [contact-lense] ' );
+?>
 
-<?php get_footer(); ?>
+<?php
+get_footer();
