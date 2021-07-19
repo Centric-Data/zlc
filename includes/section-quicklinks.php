@@ -43,19 +43,6 @@
 				</li>
 			</ul>
 		</div>
-		<div class="quicklinks__layout">
-			<div class="popular__forms--links">
-				<h3>Download popular forms</h3>
-				<form action="" id="popular__form_download">
-					<label for="document__title">
-						<div class="select__form--input">
-							<span class="selected__form">Application to Lease Land</span>
-							<button id="downloadDoc" class="material-icons">arrow_drop_down</button>
-						</div>
-					</label>
-					<input class="docdownload" type="submit" value="Download">
-				</form>
-			</div>
-		</div>
+		<?php echo do_shortcode( ' [doc-lense] ' ); ?>
 	</div>
 </section>
