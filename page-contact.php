@@ -20,4 +20,9 @@
 ?>
 
 <?php
+	// Calling the other branches from the post-type.
+	echo do_shortcode( ' [office-lense]' );
+?>
+
+<?php
 get_footer();
