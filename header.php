@@ -26,6 +26,12 @@
 	<header class="header" role="banner">
 	<div class="top__nav">
 		<div class="top__nav--container row">
+			<div class="top__contacts">
+				<ul>
+					<li>info@zlc.co.zw</li>
+					<li>+263 (242) 774604</li>
+				</ul>
+			</div>
 			<div class="top__items">
 				<div class="search__wrapper">
 					<?php get_search_form(); ?>

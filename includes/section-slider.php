@@ -16,4 +16,4 @@
 <?php
 	// Calling the other branches from the post-type.
 	echo do_shortcode( ' [slider-lense]' );
-?>
+
