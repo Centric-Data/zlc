@@ -71,6 +71,8 @@
 					array(
 						'theme_location' => 'primary-menu',
 						'container'      => false,
+						'walker'         => new LS_Menu_Walker(),
+						'show_carets'    => true,
 					)
 				);
 				?>
