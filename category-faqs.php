@@ -1,6 +1,6 @@
 <?php
 /**
- * Contact Page layout
+ * Category Page layout
  * Page
  * php version 7.3
  *
@@ -15,14 +15,7 @@
 
 <?php get_header(); ?>
 
-<?php
-	echo do_shortcode( ' [contact-lense] ' );
-?>
+<?php echo 'FAQ Category'; ?>
 
 <?php
-	// Calling the other branches from the post-type.
-	echo do_shortcode( ' [office-lense]' );
-?>
-
-<?php
-get_footer();
+	get_footer();

@@ -19,9 +19,6 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>
-		<?php echo esc_attr( get_bloginfo( 'name' ) ); ?> | <?php echo esc_attr( get_bloginfo( 'description' ) ); ?>
-	</title>
 	<?php wp_head(); ?>
 </head>
 <body  <?php body_class(); ?> >
@@ -29,6 +26,12 @@
 	<header class="header" role="banner">
 	<div class="top__nav">
 		<div class="top__nav--container row">
+			<div class="top__contacts">
+				<ul>
+					<li>info@zlc.co.zw</li>
+					<li>+263 (242) 774604</li>
+				</ul>
+			</div>
 			<div class="top__items">
 				<div class="search__wrapper">
 					<?php get_search_form(); ?>
