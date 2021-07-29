@@ -156,3 +156,30 @@ function ls_edit_text( $footer ) {
 	return $new_footer;
 }
 add_action( 'admin_init', 'ls_custom_admin_footer', 10, 1 );
+
+/**
+ * Add Walker Class to the menu.
+ */
+class LS_Menu_Walker extends Walker_Nav_Menu {
+	function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+		$output .= "<li class='" . implode( ' ', $item->classes ) . "'>";
+
+		if ( $item->url && $item->url != '#' ) {
+			$output .= '<a href="' . $item->url . '">';
+		} else {
+			$output .= '<span>';
+		}
+
+		$output .= $item->title;
+
+		if ( $item->url && $item->url !== '#' ) {
+			$output .= '</a>';
+		} else {
+			$output .= '</span>';
+		}
+
+		if ( $args->show_carets && $args->walker->has_children ) {
+			$output .= '<i class="material-icons">arrow_drop_down</i>';
+		}
+	}
+}
