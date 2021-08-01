@@ -52,8 +52,15 @@
 			<div class="page__sidebar">
 				<?php get_sidebar( 'popular' ); ?>
 			</div>
+			<div class="page__right--content">
 			<div class="page__content">
 				<?php the_content(); ?>
+			</div>
+			<div class="comments__section">
+				<?php if( comments_open() ) : ?>
+					<?php comments_template( '/short-comments.php' ); ?>
+				<?php endif; ?>
+			</div>
 			</div>
 		</div>
 	</div>
