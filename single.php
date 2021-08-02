@@ -57,7 +57,7 @@
 				<?php the_content(); ?>
 			</div>
 			<div class="comments__section">
-				<?php if( comments_open() ) : ?>
+				<?php if ( comments_open() ) : ?>
 					<?php comments_template( '/short-comments.php' ); ?>
 				<?php endif; ?>
 			</div>

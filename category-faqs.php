@@ -66,10 +66,17 @@
 			</div>
 			<div class="page__content">
 				<ul class="faqs__wrapper">
-					<?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+					<?php
+					if ( $query->have_posts() ) :
+						while ( $query->have_posts() ) :
+							$query->the_post();
+							?>
 						<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?><span class="material-icons">add_circle</span></a></li>
 						<?php endwhile; ?>
-						<?php else : echo esc_html_e( 'Sorry, no questions availables', 'lands' ); ?>
+						<?php
+						else :
+							echo esc_html_e( 'Sorry, no questions availables', 'lands' );
+							?>
 					<?php endif; ?>
 
 				</ul>

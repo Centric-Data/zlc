@@ -69,12 +69,12 @@
 				<?php
 				wp_nav_menu(
 					array(
-						'theme_location'  => 'primary-menu',
-						'container'       => false,
+						'theme_location' => 'primary-menu',
+						'container'      => false,
 						'menu_class'     => 'header__main--nav',
-						'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+						'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 						'walker'         => new LS_Menu_Walker(),
-						'show_carets'     => true,
+						'show_carets'    => true,
 					)
 				);
 				?>
