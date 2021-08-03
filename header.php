@@ -25,7 +25,7 @@
 <!-- Header Section -->
 	<header class="header" role="banner">
 	<div class="top__nav">
-		<div class="top__nav--container row">
+		<div class="top__nav--container row-ls">
 			<div class="top__contacts">
 				<ul>
 					<li>info@zlc.co.zw</li>
@@ -55,7 +55,7 @@
 		</div>
 	</div>
 	<div class="main__menu">
-		<div class="main__menu--container row">
+		<div class="main__menu--container row-ls">
 			<div class="main__logo">
 				<?php
 				if ( has_custom_logo() ) {
@@ -65,23 +65,32 @@
 				}
 				?>
 			</div>
-			<nav class="open__mobile" role="navigation">
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'primary-menu',
-						'container'      => false,
-						'menu_class'     => 'header__main--nav',
-						'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-						'walker'         => new LS_Menu_Walker(),
-						'show_carets'    => true,
-					)
-				);
-				?>
+			<!-- Navigation -->
+			<div class="container">
+			<nav class="navbar navbar-expand-md navbar-light">
+				<div class="container-fluid">
+					<div class="collapse navbar-collapse" id="main-menu">
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'primary-menu',
+								'container'      => false,
+								'menu_class'     => '',
+								'fallback_cb'    => '__return_false',
+								'items_wrap'     => '<ul id="%1$s" class="navbar-nav col-md-9 me-auto mb-2 mb-md-0 nav-fill %2$s">%3$s</ul>',
+								'depth'          => 2,
+								'walker'         => new LS_Menu_Walker(),
+							)
+						);
+						?>
+					</div>
+				</div>
 			</nav>
+			</div>
 			<div class="mobile__menu">
 				<button class="mobile__menu--nav"><span class="material-icons">menu</span></button>
 			</div>
+			<!-- End Navigation -->
 			<div class="social__links">
 				<ul>
 					<li>
