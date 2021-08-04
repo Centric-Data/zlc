@@ -620,8 +620,11 @@ ul{
     &__page{
         background-color: var(--mainBgColor);
         padding: 2em .5em;
-        margin-top: 1em;
+        margin-top: 10em;
         margin-bottom: 1em;
+        h4{
+            margin-bottom: 1em;
+        }
     }
     &__form{
         display: flex;
@@ -640,10 +643,48 @@ ul{
             border: none;
             border-bottom: 1px solid #000;
             outline: none;
+            width: 100%;
+            border-radius: 0%;
         }
     }
     &__wrapper{
         display: flex;
+    }
+    &__results{
+        &--form{
+            margin-bottom: 1em;
+        }
+        ul{
+            padding: 0;
+            li{
+                list-style: none;
+                padding: 1em;
+                margin-bottom: .5em;
+                background-color: var(--mainBgColor);
+                box-shadow: 0px 0px 5px var(--textColor);
+                transition: .2s ease-in;
+                &:hover{
+                    background-color: var(--redColor);
+                    a{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .slice__card{
+            display: flex;
+            align-items: center;
+            h5{
+                margin: 0 0 0 .2em;
+                font-size: 1em;
+            }
+        }
+        article{
+            a{
+                text-decoration: none;
+                color: var(--textColor);
+            }
+        }
     }
 }
 /* End Search Layout */
