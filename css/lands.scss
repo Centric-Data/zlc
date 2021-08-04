@@ -1084,3 +1084,34 @@ footer{
 .comment-form-cookies-consent{
     display: none;
 }
+/* End Comments Section */
+
+/* Documents Page Template */
+.doc{
+    &__lists{
+        padding-left: 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        li{
+            list-style: none;
+        }
+    }
+    &__item{
+        max-width: 200px;
+        width: 100%;
+        background-color: var(--goldColor);
+        &--icon{
+            background-color: #fff;
+            text-align: center;
+            span{
+                font-size: 8em;
+                font-weight: 400;
+            }
+        }
+        &--excerpt{
+            padding: .5em;
+        }
+    }
+}
+/* End Documents Page Template */
