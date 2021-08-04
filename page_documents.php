@@ -72,13 +72,13 @@
 							<div class="doc__item--icon">
 								<span class="material-icons">file_present</span>
 							</div>
-                            <div class="doc__item--excerpt">
-                                <h5><?php the_title(); ?></h5>
-                                <p><?php the_excerpt(); ?></p>
-                            </div>
-                            <div class="doc__download--button">
-                                <button>Download</button>
-                            </div>
+							<div class="doc__item--excerpt">
+								<h5><?php the_title(); ?></h5>
+								<p><?php the_excerpt(); ?></p>
+							</div>
+							<div class="doc__download--button">
+								<button>Download</button>
+							</div>
 						</div>
 					</li>
 						<?php
