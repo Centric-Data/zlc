@@ -30,13 +30,13 @@ if ( post_password_required() ) {
 			if ( '1' === $gillmour_comment_count ) {
 				printf(
 					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'gillmour' ),
+					esc_html__( 'One feedback on &ldquo;%1$s&rdquo;', 'lands' ),
 					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
 				);
 			} else {
 				printf(
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $gillmour_comment_count, 'comments title', 'gillmour' ) ),
+					esc_html( _nx( '%1$s comments on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', $gillmour_comment_count, 'comments title', 'lands' ) ),
 					number_format_i18n( $gillmour_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
 				);
@@ -50,8 +50,22 @@ if ( post_password_required() ) {
 			<?php
 			wp_list_comments(
 				array(
-					'style'      => 'ol',
-					'short_ping' => true,
+					'style'             => 'ol',
+					'short_ping'        => true,
+					'walker'            => null,
+					'max-depth'         => '',
+					'callback'          => null,
+					'end-callback'      => null,
+					'type'              => 'all',
+					'reply_text'        => 'Reply',
+					'page'              => '',
+					'per_page'          => '',
+					'avatar_size'       => 64,
+					'reverse_top_level' => true,
+					'reverse_children'  => true,
+					'format'            => 'html5',
+					'short_ping'        => false,
+					'echo'              => true,
 				)
 			);
 			?>
@@ -63,13 +77,38 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() ) :
 			?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'gillmour' ); ?></p>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'lands' ); ?></p>
 			<?php
 		endif;
 
 	endif; // Check for have_comments().
 
-	comment_form();
+	$fields = array(
+		'author' =>
+			'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" placeholder="Name" />',
+		esc_attr( $commenter['comment_author'] ),
+		$html_req,
+		'email'  =>
+			'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) . '" placeholder="Email" />',
+		esc_attr( $commenter['comment_author_email'] ),
+		$html_req,
+		'url'    => sprintf(
+			'<input id="url" name="url" %s value="%s" placeholder="Website"/>',
+			( $html5 ? 'type="url"' : 'type="text"' ),
+			esc_attr( $commenter['comment_author_url'] )
+		),
+	);
+
+	$args = array(
+		'class_submit'  => 'feedback__submit',
+		'label_submit'  => __( 'Submit Feedback' ),
+		'comment_field' =>
+			'<textarea id="comment" name="comment" required="required" rows="4" placeholder="Message"></textarea>',
+
+		'fields'        => apply_filters( 'comment_form_default_fields', $fields ),
+	);
+
+	comment_form( $args );
 	?>
 
 </div><!-- #comments -->
