@@ -15,6 +15,9 @@
 
 <section>
 	<div class="search__page sub-row">
+		<div class="search__results--form">
+			<?php get_search_form(); ?>
+		</div>
 		<h4><?php echo esc_html__( 'Search results here', 'lands' ); ?></h4>
 		<div class="search__results">
 			<ul>
@@ -24,7 +27,14 @@
 						the_post();
 						?>
 				<li>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+					<article>
+						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+							<div class="slice__card">
+							<span class="material-icons">info</span>
+							<h5><?php the_title(); ?></h5>
+							</div>
+						</a>
+					</article>
 				</li>
 				<?php endwhile; else : ?>
 				<?php endif; ?>

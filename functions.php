@@ -21,7 +21,7 @@
 function ls_loadcss() {
 	wp_register_style( 'landscss', get_template_directory_uri() . '/css/lands.css', array(), '1.0', 'all' );
 	wp_register_style( 'materialfonts', 'https://fonts.googleapis.com/icon?family=Material+Icons', array(), '1.0', 'all' );
-	wp_register_style( 'bootstrapcss', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css', array(), '5.0.2', 'all' );
+	wp_register_style( 'bootstrapcss', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '5.0.2', 'all' );
 	wp_enqueue_style( 'landscss' );
 	wp_enqueue_style( 'materialfonts' );
 	wp_enqueue_style( 'bootstrapcss' );
@@ -35,7 +35,7 @@ add_action( 'wp_enqueue_scripts', 'ls_loadcss' );
  */
 function ls_loadjs() {
 	wp_register_script( 'landsjs', get_template_directory_uri() . '/js/lands.js', array(), '1.0', true );
-	wp_register_script( 'bootstrapjs', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js', array( 'jquery' ), '5.0.2', true );
+	wp_register_script( 'bootstrapjs', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array( 'jquery' ), '5.0.2', true );
 	wp_enqueue_script( 'landsjs' );
 	wp_enqueue_script( 'bootstrapjs' );
 }
