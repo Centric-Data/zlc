@@ -90,7 +90,8 @@
 								<h5><?php the_title(); ?></h5>
 							</div>
 							<div class="doc__download--button">
-								<button><span class="material-icons">downloading</span></button>
+								<?php $docurl = get_post_meta( get_the_ID(), 'dl_render_meta_box_content', true ); ?>
+								<a href="<?php echo $docurl['url']; ?>"><button><span class="material-icons">downloading</span></button></a>
 							</div>
 						</div>
 					</li>
