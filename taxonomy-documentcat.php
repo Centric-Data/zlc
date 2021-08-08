@@ -98,6 +98,8 @@
 						endwhile; else :
 							echo esc_html__( 'Sorry, no documents to download', 'lands' );
 						endif;
+
+						wp_reset_postdata();
 						?>
 				</ul>
 			</div>
