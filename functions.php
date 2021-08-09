@@ -11,6 +11,8 @@
  * @link     http://www.gnu.org/licenses/gpl-3.0.html
  */
 
+define( 'PLUGINS_DIR_URL', plugin_dir_url( __FILE__ ) );
+
 /**
  * Fetches the custom stylesheet and embed it
  *
@@ -237,4 +239,11 @@ class LS_Menu_Walker extends Walker_Nav_Menu {
 
 		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 	}
+}
+
+/**
+ * Detect plugin. For use on Front End and Back End.
+ */
+if ( in_array( PLUGINS_DIR_URL . '/doclense/doclense.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ), true ) ) {
+	flush_rewrite_rules();
 }

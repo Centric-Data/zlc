@@ -11,11 +11,21 @@
 
 <?php
 
+	$documentcat_slug = get_queried_object()->slug;
+	$documentcat_name = get_queried_object()->name;
+
+	$taxarr = array(
+		'taxonomy' => 'documentcat',
+		'field'    => 'slug',
+		'terms'    => $documentcat_slug,
+	);
+
 	$args = array(
 		'post_type'      => 'centric_documents',
 		'post_status'    => 'publish',
 		'posts_per_page' => 10,
 		'order'          => 'ASC',
+		'tax_query'      => array( $taxarr ),
 	);
 
 	$query = new WP_Query( $args );
@@ -31,7 +41,11 @@
 				</nav>
 				<div class="banner__content">
 					<div class="page__title">
-						<h2><?php the_title(); ?></h2>
+						<h2>
+						<?php
+							echo $documentcat_name;
+						?>
+						</h2>
 					</div>
 					<div class="page__social">
 					<ul>
@@ -76,7 +90,8 @@
 								<h5><?php the_title(); ?></h5>
 							</div>
 							<div class="doc__download--button">
-								<button><span class="material-icons">downloading</span></button>
+								<?php $docurl = get_post_meta( get_the_ID(), 'dl_render_meta_box_content', true ); ?>
+								<a href="<?php echo $docurl['url']; ?>"><button><span class="material-icons">downloading</span></button></a>
 							</div>
 						</div>
 					</li>
@@ -84,6 +99,8 @@
 						endwhile; else :
 							echo esc_html__( 'Sorry, no documents to download', 'lands' );
 						endif;
+
+						wp_reset_postdata();
 						?>
 				</ul>
 			</div>
