@@ -688,6 +688,9 @@ ul{
     }
 }
 /* End Search Layout */
+.slider__hero--buttons{
+    display: none;
+}
 
 /* Footer CSS */
 footer{
@@ -905,6 +908,43 @@ footer{
             li{
                 line-height: 1.8;
             }
+        }
+        .cat{
+            &__post--list{
+                display: flex;
+                justify-content: space-between;
+                padding: 0;
+                article{
+                    width: 100%;
+                    max-width: 250px;
+                    .article__img{
+                        width: 100%;
+                        
+                        img{
+                            width: 100%;
+                            height: 166px;
+                            object-fit: fill;
+                        }
+                    }
+                    .article__excerpt{
+                        p{
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    }
+                }
+                li{
+                    list-style: none;
+                }
+            }
+        }
+        .read__more{
+            padding: .2em .5em;
+            background-color: var(--textColor);
+            color: #fff;
+            text-decoration: none;
+            width: 100%;
+            text-align: center;
         }
     }
     &__right{
