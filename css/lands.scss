@@ -707,19 +707,6 @@ footer{
         max-width: 1200px;
         flex-wrap: wrap;
     }
-    &__newsletter{
-        h2{
-            font-weight: 300;
-            margin-bottom: .5em;
-            &::after{
-                content: '';
-                width: 15%;
-                border-bottom: 5px solid var(--goldColor);
-                display: block;
-                margin-top: 5px;
-            }
-        }
-    }
     &__menu{
         display: flex;
         justify-content: center;
@@ -743,39 +730,7 @@ footer{
         width: 300px;
     }
 }
-.email{
-    &__sub{
-        &--desc{
-            p{
-                margin-bottom: 5px;
-            }
-        }
-    }
-    &__form{
-        &--input{
-            display: flex;
-            input{
-                padding: .5em 1em;
-                outline: none;
-                border: 0.0625rem solid var(--goldColor);
-                border-radius: 62.5rem 0 0 62.5rem;
-                width: 60%;
-                background-color: var(--textColor);
-                color: #fff;
-                height: 2.625rem;
-            }
-            button{
-                border-radius: 0 62.5rem 62.5rem 0;
-                background-color: var(--goldColor);
-                color: #000;
-                height: 2.625rem;
-                border: 0.0625rem solid var(--goldColor);
-                padding: 0 1.25rem;
-                cursor: pointer;
-            }
-        }
-    }
-}
+
 .copyright{
     width: 100%;
     color: #fff;

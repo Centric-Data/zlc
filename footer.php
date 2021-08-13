@@ -18,20 +18,7 @@
 	<div class="footer__wrapper">
 	<section>
 		<div class="footer__layout sub-row">
-			<div class="footer__newsletter footer--item">
-				<h2 class="email__sub--title">Sign up for the monthly ZLC Newsletter</h2>
-				<div class="email__sub--desc">
-					<p>All the month's headlines and highlights from Zimbabwe Land Commission, direct to you monthly</p>
-					<div class="email__form">
-						<form action="#">
-							<div class="email__form--input">
-								<input type="email" id="email-addr" placeholder="Email address">
-								<button id="email-button">Sign up</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
+			<?php echo do_shortcode( ' [newsletter-lense] ' ); ?>
 			<div class="footer__menu footer--item">
 				<nav role="navigation">
 					<?php
