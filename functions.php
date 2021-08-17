@@ -115,6 +115,34 @@ function ls_menus() {
 add_action( 'init', 'ls_menus' );
 
 /**
+ * Excerpt output
+ *
+ * @return void
+ */
+function ls_custom_excerpt_length( $length ){
+	return 20;
+}
+add_filter( 'excerpt_length', 'ls_custom_excerpt_length', 999 );
+
+/**
+ * Excerpt output
+ *
+ * @return void
+ */
+function ls_excerpt_more( $more ){
+	if( is_category() ) {
+		$more = sprintf( '<a class="read__more" href="%1$s">%2$s</a>', get_permalink( get_the_ID() ), __( 'Read More', 'lands' ) );
+	} else{
+		if( is_page() ){
+			$more = sprintf( '<a href="%1$s">%2$s</a>', get_permalink( get_the_ID() ), __( '...', 'lands' ) );
+		}
+	}
+
+	return $more;
+}
+add_filter( 'excerpt_more', 'ls_excerpt_more' );
+
+/**
  * Add some breadcrumbs to banner navigation.
  *
  * @return void

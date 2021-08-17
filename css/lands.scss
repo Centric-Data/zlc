@@ -406,6 +406,9 @@ ul{
             text-align: center;
             text-decoration: none;
             text-transform: uppercase;
+            &:hover{
+                color: grey;
+            }
         }
         h4{
             font-weight: 500;
@@ -688,6 +691,9 @@ ul{
     }
 }
 /* End Search Layout */
+.slider__hero--buttons{
+    display: none;
+}
 
 /* Footer CSS */
 footer{
@@ -703,19 +709,6 @@ footer{
         justify-content: space-between;
         max-width: 1200px;
         flex-wrap: wrap;
-    }
-    &__newsletter{
-        h2{
-            font-weight: 300;
-            margin-bottom: .5em;
-            &::after{
-                content: '';
-                width: 15%;
-                border-bottom: 5px solid var(--goldColor);
-                display: block;
-                margin-top: 5px;
-            }
-        }
     }
     &__menu{
         display: flex;
@@ -740,39 +733,7 @@ footer{
         width: 300px;
     }
 }
-.email{
-    &__sub{
-        &--desc{
-            p{
-                margin-bottom: 5px;
-            }
-        }
-    }
-    &__form{
-        &--input{
-            display: flex;
-            input{
-                padding: .5em 1em;
-                outline: none;
-                border: 0.0625rem solid var(--goldColor);
-                border-radius: 62.5rem 0 0 62.5rem;
-                width: 60%;
-                background-color: var(--textColor);
-                color: #fff;
-                height: 2.625rem;
-            }
-            button{
-                border-radius: 0 62.5rem 62.5rem 0;
-                background-color: var(--goldColor);
-                color: #000;
-                height: 2.625rem;
-                border: 0.0625rem solid var(--goldColor);
-                padding: 0 1.25rem;
-                cursor: pointer;
-            }
-        }
-    }
-}
+
 .copyright{
     width: 100%;
     color: #fff;
@@ -905,6 +866,43 @@ footer{
             li{
                 line-height: 1.8;
             }
+        }
+        .cat{
+            &__post--list{
+                display: flex;
+                justify-content: space-between;
+                padding: 0;
+                article{
+                    width: 100%;
+                    max-width: 250px;
+                    .article__img{
+                        width: 100%;
+                        
+                        img{
+                            width: 100%;
+                            height: 166px;
+                            object-fit: fill;
+                        }
+                    }
+                    .article__excerpt{
+                        p{
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    }
+                }
+                li{
+                    list-style: none;
+                }
+            }
+        }
+        .read__more{
+            padding: .2em .5em;
+            background-color: var(--textColor);
+            color: #fff;
+            text-decoration: none;
+            width: 100%;
+            text-align: center;
         }
     }
     &__right{

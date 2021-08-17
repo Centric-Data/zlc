@@ -13,6 +13,18 @@
 
 ?>
 
+<?php
+	$cat = get_the_category();
+	$post_cat = $cat[0]->cat_name;
+
+	$args = array(
+		'category_name'		=>	$post_cat,
+		'posts_per_page'	=>	10,
+	);
+
+	$query	=	new WP_Query( $args );
+?>
+
 <?php get_header(); ?>
 
 <section>
@@ -53,7 +65,23 @@
 				<?php get_sidebar( 'popular' ); ?>
 			</div>
 			<div class="page__content">
-				<?php echo esc_html__( 'Category Items go here', 'lands' ); ?>
+				<ul class="cat__post--list">
+					<?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
+					<li>
+						<article>
+							<div class="article__img">
+								<?php the_post_thumbnail(); ?>
+							</div>
+							<div class="article__excerpt">
+								<?php the_excerpt(); ?>
+							</div>
+						</article>
+					</li>
+					<?php endwhile; else:
+							echo esc_html_e( 'Sorry no posts for this category', 'lands' );
+					endif;
+						?>
+				</ul>
 			</div>
 		</div>
 	</div>
