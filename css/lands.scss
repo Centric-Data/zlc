@@ -406,6 +406,9 @@ ul{
             text-align: center;
             text-decoration: none;
             text-transform: uppercase;
+            &:hover{
+                color: grey;
+            }
         }
         h4{
             font-weight: 500;
