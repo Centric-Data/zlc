@@ -274,9 +274,12 @@ ul{
             &.active{
                 background-color: #000;
             }
+            &:hover{
+                background-color: var(--goldColor);
+            }
         }
         .dropdown-menu {
-            background-color: var(--goldColor);
+            background-color: var(--mainBgColor);
         }
         .menu{
             font-weight: 500;
@@ -755,13 +758,15 @@ footer{
 .page{
     &__breadcrumbs{
         display: flex;
+        padding-left: 0;
         li{
             list-style: none;
             margin:.8em .8em 0 0;
             font-size: .9rem;
             a{
                 text-decoration: none;
-                color: #fff;
+                color: #000;
+                font-weight: 800;
             }
         }
     }
@@ -787,17 +792,16 @@ footer{
         }
     }
     &__title{
-        background-color: var(--redColor);
         bottom: -40px;
         min-height: 160px;
         max-width: 40%;
         line-height: 38px;
-        padding: 40px 78px 44px 78px;
+        padding: 40px 78px 44px 0px;
         border-radius: 0 45px 0 45px;
         position: absolute;
         h2{
             font-weight: 600;
-            color: #fff;
+            color: #000;
             font-size: 2em;
             a{
                 text-decoration: none;
@@ -818,7 +822,10 @@ footer{
     &__sidebar{
         width: 100%;
         max-width: 250px;
+        background-color: #EBEBEB;
+        padding: .5em;
         ul{
+            padding-left: 1em;
             li{
                 list-style: disclosure-closed;
                 margin-bottom: 5px;
@@ -841,7 +848,8 @@ footer{
             text-transform: uppercase;
             font-weight: 600;
             color: var(--textColor);
-            padding: 1em 0;
+            padding: .7em 0;
+            font-size: 1.2em;
             &::after{
                 content: '';
                 width: 10%;
@@ -854,13 +862,17 @@ footer{
     &__content{
         color: var(--textColor);
         padding: 1em 2em;
-        margin-left: 1em;
         background-color: var(--mainBgColor);
         width: 100%;
         p{
             line-height: 28px;
             font-size: 1em;
-            margin: 1em 0;
+            margin: .5em 0;
+        }
+        h3{
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-transform: uppercase;
         }
         ol,ul{
             li{
@@ -918,9 +930,12 @@ footer{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 230px;
+        height: 180px;
         margin-bottom: 50px;
-        background-color: var(--greenColor);
+        background-color: #e8e8e8;
+        border-bottom: 2px solid var(--goldColor);
+        background-image: linear-gradient(to bottom, rgb(154 154 154 / 52%), rgb(255 255 255 / 73%)), url("https://source.unsplash.com/JR8XZ-gdZrA/1600x900");
+        background-size: cover;
         &--main{
             display: flex;
             flex-direction: column;
