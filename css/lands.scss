@@ -276,6 +276,7 @@ ul{
             }
             &:hover{
                 background-color: var(--goldColor);
+                transition: background-color 0.8s ease;
             }
         }
         .dropdown-menu {
