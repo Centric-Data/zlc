@@ -19,7 +19,7 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 .yellowbg{
-    background-color: var(--goldColor);
+    // background-color: var(--goldColor);
 }
 ul{
     margin-bottom: 0 !important;
@@ -509,20 +509,19 @@ ul{
             border-radius: 150px;
             // border: 1px solid #000;
             padding: 50px;
-            width: 250px;
-            height: 250px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-color: var(--greenColor);
-            color: #fff;
-            gap: 1em;
-            box-shadow: 0px 0px 10px #000;
+            color: #000;
+            border-right: 6px solid var(--greenColor);
             h3{
                 font-size: 3em;
             }
         }
+    }
+    &__counter{
+        font-size: 3em;
     }
 }
 /* End Statistics CSS */
@@ -555,19 +554,12 @@ ul{
         background-color: var(--mainBgColor);
         cursor: pointer;
         box-shadow: 0px 0px 3px var(--textColor);
-        border-radius: 0px 30px 0 0;
         &--img{
             max-width: 375px;
             max-height: 250px;
             img{
                 width: 100%;
                 height: auto;
-                filter: grayscale(100);
-                border-radius: 0px 30px;
-                &:hover{
-                    filter: grayscale(0);
-                    transition: 0.3s ease-in-out;
-                }
             }
         }
         a{
@@ -604,7 +596,7 @@ ul{
     span{
         padding: 5px;
         border-radius: 50px;
-        background-color: var(--redColor);
+        background-color: #000;
         color: #fff;
     }
 }

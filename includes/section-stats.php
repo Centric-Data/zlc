@@ -22,17 +22,17 @@
 			<ul class="statistics__items">
 				<li>
 					<span>Examining over</span>
-					<h3>4,300</h3>
+					<div class="statistics__counter" data-start-at="0" data-delay="0" data-end-at="300">{}</div>
 					<span>land division plans each year</span>
 				</li>
 				<li>
 					<span>Auditing over</span>
-					<h3>200k</h3>
+					<div class="statistics__counter" data-start-at="0" data-end-at="500" data-time="1000">{}</div>
 					<span>farm settlements each year</span>
 				</li>
 				<li>
 					<span>Valuing over</span>
-					<h3>910k</h3>
+					<div class="statistics__counter" data-start-at="0" data-end-at="400">{}</div>
 					<span>properties each year</span>
 				</li>
 			</ul>
