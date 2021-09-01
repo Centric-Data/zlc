@@ -14,7 +14,7 @@
 ?>
 
 <section class="yellowbg">
-	<div class="quicklinks__wrapper sub-row">
+	<div class="quicklinks__wrapper container-lg">
 		<div class="quicklinks__layout">
 			<ul class="quicklinks__list">
 				<li class="quicklinks__link">

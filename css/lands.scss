@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;900&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 :root{
@@ -7,6 +8,7 @@
     --goldColor: #fece03;
     --textColor: #41505D;
     --mainBgColor: #F2F5F7;
+    --mainFont: 'Jost', sans-serif;
 }
 
 *,html{
@@ -16,7 +18,7 @@
 }
 body{
     // background-color: var(--goldColor);
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--mainFont) !important;
 }
 .yellowbg{
     // background-color: var(--goldColor);
@@ -26,6 +28,9 @@ ul{
 }
 // Media Target <768px
 @media only screen and (min-device-width: 320px) and (max-width: 768px) {
+    .navbar-expand-md .navbar-nav{
+        flex-direction: column;
+    }
     .main__menu{
         height: auto;
         &--container {
@@ -50,7 +55,7 @@ ul{
                 }
             }
             .open__mobile{
-                left: -100%;
+                left: 0;
             }
             nav{
                 //display: block;
@@ -59,7 +64,7 @@ ul{
                 height: calc(100vh - 105px);
                 background-color: #fece03e0;
                 top:105px;
-                left: 0;
+                left: -100%;
                 transition: 0.5s;
             }
             .social__links{
@@ -97,27 +102,31 @@ ul{
             align-items: center;
         }
     }
+    .popular__
     #popular__form_download{
         flex-direction: column;
         gap: 8px;
+        align-items: center;
     }
     /* Page Layout */
     .page{
         &__layout{
             padding: 1em;
             background-color: #fff;
+            flex-direction: column;
         }
         &__title{
             padding: 1em;
-            background-color: var(--redColor);
             border-radius: 0 25px 0 25px;
             position: absolute;
-            max-width: 480px;
+            max-width: 60%;
             max-height: 120px;
+            padding-right: 0px;
             // bottom: -15px;
             h2{
                 font-weight: 500;
                 color: #fff;
+                font-size: 1.4em;
             }
         }
         &__social{
@@ -154,10 +163,14 @@ ul{
                 }
             }
         }
+        &__sidebar{
+            display: none;
+        }
     }
     .banner{
         &__wrapper{
             height: 170px;
+            margin-bottom: 0px;
             &--main{
                 padding: 1em;
                 display: flex;
@@ -787,15 +800,14 @@ footer{
     &__title{
         bottom: -40px;
         min-height: 160px;
-        max-width: 50%;
+        max-width: 60%;
         line-height: 38px;
-        padding: 40px 78px 44px 0px;
+        padding: 40px 0px 44px 0px;
         border-radius: 0 45px 0 45px;
         position: absolute;
         h2{
             font-weight: 600;
             color: #000;
-            font-size: 2em;
             a{
                 text-decoration: none;
                 color: #fff;
@@ -805,6 +817,7 @@ footer{
     &__layout{
         display: flex;
         margin-bottom: 1em;
+        margin-top: 1em;
         strong{
             font-size: 1.1em;
             font-weight: 500;
@@ -854,7 +867,7 @@ footer{
     }
     &__content{
         color: var(--textColor);
-        padding: 1em 2em;
+        padding: 0em 1em;
         background-color: var(--mainBgColor);
         width: 100%;
         p{
@@ -929,7 +942,7 @@ footer{
         flex-direction: column;
         justify-content: space-between;
         height: 180px;
-        margin-bottom: 50px;
+        // margin-bottom: 50px;
         background-color: #e8e8e8;
         border-bottom: 2px solid var(--goldColor);
         background-image: linear-gradient(to bottom, rgb(154 154 154 / 52%), rgb(255 255 255 / 73%)), url("https://source.unsplash.com/JR8XZ-gdZrA/1600x900");
@@ -982,10 +995,10 @@ footer{
         color: var(--textColor);
         padding: 1em 2em;
         margin-left: 1em;
-        margin-top: 1em;
-        background-color: var(--greenColor);
-        border-radius: 5px;
-        color: #fff;
+        // margin-top: 1em;
+        background-color: var(--mainBgColor);
+        // border-radius: 5px;
+        color: var(--textColor);
         width: 100%;
         h4{
             &::after{
@@ -995,6 +1008,10 @@ footer{
                 display: block;
                 margin-top: 5px;
             }
+        }
+        #reply-title {
+            font-size: calc(.8rem + .6vw);
+            margin-top: 1.2em;
         }
     }
 }

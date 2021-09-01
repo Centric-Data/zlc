@@ -14,7 +14,7 @@
 ?>
 
 <section class="yellowbg">
-	<div class="statistics__wrapper sub-row">
+	<div class="statistics__wrapper container-lg">
 		<div class="statistics">
 			<p class="statistics__title">
 				A Centre of Excellence in Equitable and Sustainable Land Administration and Management

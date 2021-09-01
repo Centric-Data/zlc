@@ -18,7 +18,7 @@
 <section>
 	<div class="page__wrapper">
 		<div class="banner__wrapper">
-			<div class="banner__wrapper--main sub-row">
+			<div class="banner__wrapper--main container-lg">
 				<nav role="navigation">
 					<?php ls_breadcrumbs(); ?>
 				</nav>
@@ -48,7 +48,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="page__layout sub-row">
+		<div class="page__layout container-lg">
 			<div class="page__sidebar">
 				<?php get_sidebar( 'popular' ); ?>
 			</div>
