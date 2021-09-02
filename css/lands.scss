@@ -278,7 +278,7 @@ ul{
             color: #000;
             font-size: 1.2em;
             font-weight: 500;
-            text-transform: uppercase;
+            text-transform: capitalize;
         }
         .dropdown-item{
             text-transform: capitalize;
@@ -535,6 +535,7 @@ ul{
     }
     &__counter{
         font-size: 3em;
+        font-weight: 500;
     }
 }
 /* End Statistics CSS */
