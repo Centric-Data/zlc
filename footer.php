@@ -17,7 +17,7 @@
 <footer>
 	<div class="footer__wrapper">
 	<section>
-		<div class="footer__layout sub-row">
+		<div class="footer__layout container-lg">
 			<?php echo do_shortcode( ' [newsletter-lense] ' ); ?>
 			<div class="footer__menu footer--item">
 				<nav role="navigation">

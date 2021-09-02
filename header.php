@@ -77,7 +77,7 @@
 								'container'      => false,
 								'menu_class'     => '',
 								'fallback_cb'    => '__return_false',
-								'items_wrap'     => '<ul id="%1$s" class="navbar-nav col-md-9 me-auto mb-2 mb-md-0 nav-fill %2$s">%3$s</ul>',
+								'items_wrap'     => '<ul id="%1$s" class="navbar-nav col-md-9 me-auto mb-2 mb-md-0 nav-fill lands-menu %2$s">%3$s</ul>',
 								'depth'          => 2,
 								'walker'         => new LS_Menu_Walker(),
 							)
