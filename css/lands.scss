@@ -279,6 +279,8 @@ ul{
             font-size: 1.2em;
             font-weight: 500;
             text-transform: capitalize;
+            outline: none;
+            text-shadow: none;
         }
         .dropdown-item{
             text-transform: capitalize;
@@ -868,7 +870,7 @@ footer{
     }
     &__content{
         color: var(--textColor);
-        padding: 0em 1em;
+        padding: 1em;
         background-color: var(--mainBgColor);
         width: 100%;
         p{
