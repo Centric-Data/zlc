@@ -89,7 +89,7 @@ if ( post_password_required() ) {
 		esc_attr( $commenter['comment_author'] ),
 		$html_req,
 		'email'  =>
-			'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) . '" placeholder="Email" />',
+			'<input id="email" name="email" type="email" value="' . esc_attr( $commenter['comment_author_email'] ) . '" placeholder="Email" />',
 		esc_attr( $commenter['comment_author_email'] ),
 		$html_req,
 		'url'    => sprintf(
