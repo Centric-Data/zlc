@@ -28,8 +28,8 @@
 		<div class="top__nav--container row-ls">
 			<div class="top__contacts">
 				<ul>
-					<li>info@zlc.co.zw</li>
-					<li>+263 (242) 774604</li>
+					<li><a href="mailto:info@zlc.co.zw">Email us</a></li>
+					<li><a href="tel:+263 (242) 774604">+263 (242) 774604</a></li>
 				</ul>
 			</div>
 			<div class="top__items">

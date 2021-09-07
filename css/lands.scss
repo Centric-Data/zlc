@@ -255,6 +255,12 @@ ul{
                 margin-right: .5em;
                 font-size: .9em;
                 font-weight: 400;
+                padding: .5em;
+                background-color: #1313132e;
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                }
             }
         }
     }
@@ -651,12 +657,15 @@ ul{
             background: none;
             border: none;
             cursor: pointer;
+            display: flex;
+            align-self: center;
+            flex-direction: column;
         }
         input{
-            height: 2rem;
+            height: 2.2rem;
             background: none;
             border: none;
-            border-bottom: 1px solid #000;
+            border-bottom: 5px solid var(--goldColor);
             outline: none;
             width: 100%;
             border-radius: 0%;
