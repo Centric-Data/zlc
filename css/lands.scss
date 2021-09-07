@@ -460,55 +460,7 @@ ul{
         }
     }
 }
-.popular__forms{
-    &--links{
-        padding: 35px 30px 19px 30px;
-        h3{
-            color: var(--greenColor);
-            text-transform: uppercase;
-            font-weight: 600;
-            font-size: 1em;
-            margin-bottom: 10px;
-        }
-    }
-}
-.select__form{
-    &--input{
-        width: 340px;
-        margin: 0 15px 0 0;
-        height: 55px;
-        border: 1px solid gainsboro;
-        display: flex;
-        justify-content: space-between;
-        padding: 2px 10px;
-        align-items: center;
-        cursor: pointer;
-        button{
-            border: none;
-            background: none;
-            outline: none;
-        }
-        .selected__form{
-            font-size: 1em;
-        }
-    }
-}
 
-#popular__form_download{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-.docdownload{
-    height: 55px;
-    width: 25%;
-    outline: none;
-    background-color: var(--goldColor);
-    border: none;
-    border-radius: 50px;
-    font-size: 1em;
-    cursor: pointer;
-}
 /* End Quicklinks Section CSS */
 
 /* Statistics CSS */
