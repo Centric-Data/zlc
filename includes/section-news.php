@@ -35,29 +35,56 @@ $query = new WP_Query( $args );
 				$query->the_post();
 				?>
 			<div class="news__card">
-				<article>
-					<div class="news__card--img">
-						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-							<?php the_post_thumbnail( 'card-thumb' ); ?>
-						</a>
-					</div>
-					<div class="news__card--content">
-						<div>
-							<h4>
-								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-									<?php the_title(); ?>
-								</a>
-							</h4>
-						</div>
-						<div><p><?php the_excerpt(); ?></p></div>
-						<div class="readmore__front">
-							<time><?php the_time( 'd F Y' ); ?></time>
+				<div class="news__card--front">
+					<article>
+						<div class="news__card--img">
 							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-								<span class="material-icons">arrow_forward</span>
+								<?php the_post_thumbnail( 'card-thumb' ); ?>
 							</a>
 						</div>
-					</div>
-				</article>
+						<div class="news__card--content">
+							<div>
+								<h4>
+									<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+										<?php the_title(); ?>
+									</a>
+								</h4>
+							</div>
+							<div><p><?php the_excerpt(); ?></p></div>
+							<div class="readmore__front">
+								<time><?php the_time( 'd F Y' ); ?></time>
+								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+									<span class="material-icons">arrow_forward</span>
+								</a>
+							</div>
+						</div>
+					</article>
+				</div>
+				<div class="news__card--back">
+					<article>
+							<div class="news__card--img">
+								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+									<?php the_post_thumbnail( 'card-thumb' ); ?>
+								</a>
+							</div>
+							<div class="news__card--content">
+								<div>
+									<h4>
+										<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+											<?php the_title(); ?>
+										</a>
+									</h4>
+								</div>
+								<div><p><?php the_excerpt(); ?></p></div>
+								<div class="readmore__front">
+									<time><?php the_time( 'd F Y' ); ?></time>
+									<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+										<span class="material-icons">arrow_forward</span>
+									</a>
+								</div>
+							</div>
+						</article>
+				</div>
 			</div>
 					<?php endwhile; else : ?>
 				<p><?php esc_html_e( 'Sorry, no content available', 'lands' ); ?></p>
