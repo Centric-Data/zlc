@@ -18,7 +18,7 @@
 		<div class="quicklinks__layout">
 			<ul class="quicklinks__list">
 				<li class="quicklinks__link">
-					<a href="#">
+					<a href="http://zlc.local/submit-form/">
 						<div class="quicklinks__image">
 							<span class="material-icons">description</span>
 						</div>
@@ -26,7 +26,7 @@
 					</a>
 				</li>
 				<li class="quicklinks__link">
-					<a href="#">
+					<a href="http://zlc.local/?s">
 						<div class="quicklinks__image">
 							<span class="material-icons">location_searching</span>
 						</div>
@@ -34,7 +34,7 @@
 					</a>
 				</li>
 				<li class="quicklinks__link">
-					<a href="#">
+					<a href="http://zlc.local/submit-form/">
 						<div class="quicklinks__image">
 							<span class="material-icons">file_present</span>
 						</div>
