@@ -21,19 +21,19 @@
 			</p>
 			<ul class="statistics__items">
 				<li>
-					<span>Examining over</span>
-					<div class="statistics__counter" data-start-at="0" data-delay="0" data-end-at="300">{}</div>
-					<span>land division plans each year</span>
+					<span>Carry out periodic audits of</span>
+					<div class="statistics__counter" data-start-at="0" data-delay="0" data-end-at="300">{}k</div>
+					<span>farms nationwide once every 5 years</span>
 				</li>
 				<li>
-					<span>Auditing over</span>
-					<div class="statistics__counter" data-start-at="0" data-end-at="500" data-time="1000">{}</div>
-					<span>farm settlements each year</span>
+					<span>Carry out farm inspections for over</span>
+					<div class="statistics__counter" data-start-at="0" data-end-at="300" data-time="1000">{}k</div>
+					<span>farms annually</span>
 				</li>
 				<li>
-					<span>Valuing over</span>
-					<div class="statistics__counter" data-start-at="0" data-end-at="400">{}</div>
-					<span>properties each year</span>
+					<span>Assessment of all A2 farms and issuance of</span>
+					<div class="statistics__counter" data-start-at="0" data-end-at="99">{}</div>
+					<span>year leases</span>
 				</li>
 			</ul>
 		</div>
