@@ -94,7 +94,7 @@
 			<div class="social__links">
 				<ul>
 					<li>
-						<a href="#">
+						<a id="fb_button" href="#">
 							<img src="<?php echo bloginfo( 'template_url' ); ?>/img/facebook.png" alt="facebook">
 						</a>
 					</li>
