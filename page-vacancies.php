@@ -50,7 +50,9 @@
 		</div>
 		<div class="page__layout container-lg">
 			<div class="page__content">
-				<?php the_content(); ?>
+				<?php
+					echo do_shortcode( ' [vacancy-lense] ' );
+				?>
 			</div>
 		</div>
 	</div>
