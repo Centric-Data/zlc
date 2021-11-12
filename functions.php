@@ -23,22 +23,28 @@ define( 'PLUGINS_DIR_URL', plugin_dir_url( __FILE__ ) );
 function ls_loadcss() {
 	wp_register_style( 'landscss', get_template_directory_uri() . '/css/lands.css', array(), '1.0', 'all' );
 	wp_register_style( 'materialfonts', 'https://fonts.googleapis.com/icon?family=Material+Icons', array(), '1.0', 'all' );
+	wp_register_style( 'sweetalertcss', get_template_directory_uri() . '/css/sweetalert.min.css', array(), '2.0', 'all' );
 	wp_register_style( 'bootstrapcss', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '5.0.2', 'all' );
+	wp_register_style( 'tailwind-css', get_template_directory_uri() . '/css/tailwind.min.css', array(), '2.2.16', 'all' );
 	wp_enqueue_style( 'landscss' );
+	wp_enqueue_style( 'sweetalertcss' );
 	wp_enqueue_style( 'materialfonts' );
 	wp_enqueue_style( 'bootstrapcss' );
+	wp_enqueue_style( 'tailwind-css' );
 }
 add_action( 'wp_enqueue_scripts', 'ls_loadcss' );
 
 /**
- * Fetches the custom js file and embed it
+ * Fetches the custom js file and embed it nQ-buW{e}]^3
  *
  * @return void
  */
 function ls_loadjs() {
 	wp_register_script( 'landsjs', get_template_directory_uri() . '/js/lands.js', array(), '1.0', true );
 	wp_register_script( 'bootstrapjs', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array( 'jquery' ), '5.0.2', true );
+	wp_register_script( 'sweetalertjs', get_template_directory_uri() . '/js/sweetalert.min.js', array( 'jquery' ), '2.0', true );
 	wp_enqueue_script( 'landsjs' );
+	wp_enqueue_script( 'sweetalertjs' );
 	wp_enqueue_script( 'bootstrapjs' );
 }
 add_action( 'wp_enqueue_scripts', 'ls_loadjs' );
@@ -196,7 +202,7 @@ function ls_edit_text( $footer ) {
 add_action( 'admin_init', 'ls_custom_admin_footer', 10, 1 );
 
 function ls_inline_script() {
-	if( is_home() || is_front_page() ) {
+	if ( is_home() || is_front_page() ) {
 		?>
 			<script>
 				// Counter Functions
