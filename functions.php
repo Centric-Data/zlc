@@ -25,10 +25,12 @@ function ls_loadcss() {
 	wp_register_style( 'materialfonts', 'https://fonts.googleapis.com/icon?family=Material+Icons', array(), '1.0', 'all' );
 	wp_register_style( 'sweetalertcss', get_template_directory_uri() . '/css/sweetalert.min.css', array(), '2.0', 'all' );
 	wp_register_style( 'bootstrapcss', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '5.0.2', 'all' );
+	wp_register_style( 'tailwind-css', get_template_directory_uri() . '/css/tailwind.min.css', array(), '2.2.16', 'all' );
 	wp_enqueue_style( 'landscss' );
 	wp_enqueue_style( 'sweetalertcss' );
 	wp_enqueue_style( 'materialfonts' );
 	wp_enqueue_style( 'bootstrapcss' );
+	wp_enqueue_style( 'tailwind-css' );
 }
 add_action( 'wp_enqueue_scripts', 'ls_loadcss' );
 
