@@ -21,19 +21,19 @@
 			</p>
 			<ul class="statistics__items">
 				<li>
-					<span>Carry out periodic audits of</span>
-					<div class="statistics__counter" data-start-at="0" data-delay="0" data-end-at="300">{}k</div>
-					<span>farms nationwide once every 5 years</span>
+					<span>Farms Audited</span>
+					<div class="statistics__counter" data-start-at="0" data-delay="0" data-end-at="71">{}k</div>
+					<span>by the Commission</span>
 				</li>
 				<li>
-					<span>Carry out farm inspections for over</span>
-					<div class="statistics__counter" data-start-at="0" data-end-at="300" data-time="1000">{}k</div>
-					<span>farms annually</span>
+					<span>Resolved Disputes</span>
+					<div class="statistics__counter" data-start-at="0" data-end-at="2" data-time="1000">{}k</div>
+					<span>by the Commission</span>
 				</li>
 				<li>
-					<span>Assessment of all A2 farms and issuance of</span>
+					<span>Farms Inspected For</span>
 					<div class="statistics__counter" data-start-at="0" data-end-at="99">{}</div>
-					<span>year leases</span>
+					<span>year lease</span></span>
 				</li>
 			</ul>
 		</div>
