@@ -209,7 +209,9 @@ ul{
 /* Header Section CSS */
 
 .header{
-    margin-bottom: 140px;
+    margin-bottom: 119px;
+    // height: 117px;
+    // max-height: 117px;
 }
 .top__nav{
     display: block;
@@ -387,6 +389,7 @@ ul{
     img{
         width: 32px;
         height: 32px;
+        max-width: 32px;
     }
 }
 .mobile__menu{
@@ -924,6 +927,7 @@ footer{
         &--content{
             display: flex;
             flex-direction: column;
+            width: 100%;
         }
     }
 }
