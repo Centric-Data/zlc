@@ -49,7 +49,7 @@
 			</div>
 		</div>
 		<div class="page__layout container-lg">
-			<div class="page__sidebar">
+			<div class="page__sidebar bg-yellow-300">
 				<?php get_sidebar( 'popular' ); ?>
 			</div>
 			<div class="page__content">

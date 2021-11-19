@@ -167,6 +167,11 @@ ul{
             display: none;
         }
     }
+    .side__bottom{
+        img{
+            filter: grayscale(100%);
+        }
+    }
     .banner{
         &__wrapper{
             height: 170px;
@@ -823,7 +828,7 @@ footer{
     &__sidebar{
         width: 100%;
         max-width: 250px;
-        background-color: #EBEBEB;
+        // background-color: #EBEBEB;
         padding: .5em;
         ul{
             padding-left: 1em;
@@ -929,6 +934,11 @@ footer{
             flex-direction: column;
             width: 100%;
         }
+    }
+}
+.side__bottom{
+    img{
+        filter: drop-shadow(0 0 0.5rem black);
     }
 }
 .banner{
