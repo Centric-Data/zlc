@@ -35,7 +35,7 @@ $query = new WP_Query( $args );
 				$query->the_post();
 				?>
 			<div class="news__card">
-				<div class="news__card--front">
+				<div class="card__side news__card--front">
 					<article>
 						<div class="news__card--img">
 							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
@@ -60,7 +60,7 @@ $query = new WP_Query( $args );
 						</div>
 					</article>
 				</div>
-				<div class="news__card--back">
+				<div class="card__side news__card--back">
 					<article>
 							<div class="news__card--img">
 								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">

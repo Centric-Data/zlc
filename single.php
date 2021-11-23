@@ -49,11 +49,11 @@
 			</div>
 		</div>
 		<div class="page__layout container-lg">
-			<div class="page__sidebar">
-				<?php get_sidebar( 'popular' ); ?>
+			<div class="page__sidebar rounded-l-lg bg-yellow-300">
+				<?php get_sidebar( 'category' ); ?>
 			</div>
-			<div class="page__right--content">
-			<div class="page__content">
+			<div class="page__right--content rounded-r-lg">
+			<div class="page__content rounded-r-lg">
 				<?php the_content(); ?>
 			</div>
 			<div class="comments__section container-lg">
