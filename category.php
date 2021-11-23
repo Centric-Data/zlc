@@ -62,8 +62,8 @@
 			</div>
 		</div>
 		<div class="page__layout sub-row">
-			<div class="page__sidebar">
-				<?php get_sidebar( 'popular' ); ?>
+			<div class="page__sidebar bg-yellow-300">
+				<?php get_sidebar( 'category' ); ?>
 			</div>
 			<div class="page__content">
 				<ul class="cat__post--list">

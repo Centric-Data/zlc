@@ -56,10 +56,10 @@
 			</div>
 		</div>
 		<div class="page__layout sub-row">
-			<div class="page__sidebar">
-				<?php get_sidebar( 'popular' ); ?>
+			<div class="page__sidebar rounded-l-lg bg-yellow-300">
+				<?php get_sidebar(); ?>
 			</div>
-			<div class="page__content">
+			<div class="page__content rounded-r-lg">
 				<h5>Download Docs</h5>
 				<ul class="doc__lists">
 				<?php

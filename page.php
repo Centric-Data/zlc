@@ -49,10 +49,10 @@
 			</div>
 		</div>
 		<div class="page__layout container-lg">
-			<div class="page__sidebar bg-yellow-300">
-				<?php get_sidebar( 'popular' ); ?>
+			<div class="page__sidebar rounded-l-lg bg-yellow-300">
+				<?php get_sidebar(); ?>
 			</div>
-			<div class="page__content">
+			<div class="page__content rounded-r-lg">
 				<?php the_content(); ?>
 			</div>
 		</div>

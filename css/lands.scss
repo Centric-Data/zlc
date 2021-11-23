@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,800;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 :root{
@@ -8,7 +10,8 @@
     --goldColor: #fece03;
     --textColor: #41505D;
     --mainBgColor: #F2F5F7;
-    --mainFont: 'Jost', sans-serif;
+    --mainFont: 'Open Sans', sans-serif;
+    --welcomeFont: 'Roboto', sans-serif;
 }
 
 *,html{
@@ -413,6 +416,7 @@ ul{
     &__wrapper{
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     &__layout{
         width: 100%;
@@ -535,18 +539,26 @@ ul{
         perspective: 1000px;
     }
     &__card{
-        background-color: var(--mainBgColor);
-        cursor: pointer;
-        box-shadow: 0px 0px 3px var(--textColor);
-        transition: transform 0.8s;
-        transform-style: preserve-3d;
+        perspective: 150rem;
         position: relative;
-        &:hover{
-            transform: rotateY(180deg);
+        height: 40rem;
+        width: 100%;
+        max-width: 400px;
+        margin: 0px;
+        box-shadow: none;
+        background: none;
+        &--front{
+            background-color: var(--greenColor);
+            background-image: linear-gradient(160deg, #80D0C7 0%, var(--greenColor) 100%);
+        }
+        &--back{
+            transform: rotateY(-180deg);
+            background-color: var(--goldColor);
+            background-image: linear-gradient(43deg, #000 0%,#000 46%, #000 100%);
         }
         &--img{
-            max-width: 375px;
-            max-height: 250px;
+            // max-width: 375px;
+            // max-height: 250px;
             position: relative;
             img{
                 width: 100%;
@@ -555,13 +567,14 @@ ul{
         }
         a{
             text-decoration: none;
-            color: var(--textColor);
+            color: #fff;
             &:hover{
                 color: var(--greenColor);
             }
         }
         article{
-            max-width: 375px;
+            // max-width: 375px;
+            width: 100%;
             // max-height: 540px;
         }
         &--content{
@@ -572,31 +585,33 @@ ul{
             h4{
                 margin: .8em 0;
                 font-size: 1.3em;
-                font-weight: 400;
+                font-weight: 600;
             }
             p{
                 // line-height: 1.4px;
-                font-weight: 300;
-                font-size: 1em;
+                font-weight: 400;
+                font-size: 1.1em;
             }
         }
-        &--front{
-            // position: absolute;
-            width: 100%;
-            height: 100%;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-        }
-        &--back{
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-            transform: rotateY(180deg);
-            top: 0;
-        }
     }
+}
+.news__card:hover .news__card--front{
+    transform: rotateY(180deg);
+}
+.news__card:hover .news__card--back{
+    transform: rotateY(0deg);
+}
+.card__side{
+    height: 35rem;
+    border-radius: 5px;
+    transition: all 0.8s ease;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    // padding:1rem;
+    color: white
 }
 .readmore__front{
     display: flex;
@@ -820,7 +835,7 @@ footer{
         margin-top: 1em;
         strong{
             font-size: 1.1em;
-            font-weight: 500;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -828,15 +843,14 @@ footer{
     &__sidebar{
         width: 100%;
         max-width: 250px;
-        // background-color: #EBEBEB;
+        background-color: var(--goldColor);
         padding: .5em;
         ul{
-            padding-left: 1em;
+            padding-left: 0;
             li{
-                list-style: disclosure-closed;
                 margin-bottom: 5px;
                 padding: 8px 0;
-                border-top: 1px solid #E5E8EB;
+                // border-top: 1px solid #000;
                 &:first-child{
                     border: none;
                 }
@@ -856,13 +870,6 @@ footer{
             color: var(--textColor);
             padding: .7em 0;
             font-size: 1.2em;
-            &::after{
-                content: '';
-                width: 10%;
-                border-bottom: 5px solid var(--goldColor);
-                display: block;
-                margin-top: 5px;
-            }
         }
     }
     &__content{
@@ -881,6 +888,7 @@ footer{
             text-transform: uppercase;
         }
         ol,ul{
+            padding-left: 0px;
             li{
                 line-height: 1.8;
             }
@@ -933,6 +941,7 @@ footer{
             display: flex;
             flex-direction: column;
             width: 100%;
+            background-color: var(--mainBgColor);
         }
     }
 }
