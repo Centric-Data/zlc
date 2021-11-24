@@ -37,7 +37,7 @@
 				</nav>
 				<div class="banner__content">
 					<div class="page__title">
-						<h2><?php the_category( ', ' ); ?></h2>
+						<h2 class="text-black"><?php the_category( ', ' ); ?></h2>
 					</div>
 					<div class="page__social">
 					<ul>
