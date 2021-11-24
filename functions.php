@@ -139,7 +139,7 @@ add_filter( 'excerpt_length', 'ls_custom_excerpt_length', 999 );
  */
 function ls_excerpt_more( $more ) {
 	if ( is_category() ) {
-		$more = sprintf( '<a class="read__more" href="%1$s">%2$s</a>', get_permalink( get_the_ID() ), __( 'Read More', 'lands' ) );
+		$more = sprintf( '<a class="mt-2 bg-green-500 p-2 text-center text-white no-underline uppercase" href="%1$s">%2$s</a>', get_permalink( get_the_ID() ), __( 'Read More', 'lands' ) );
 	} else {
 		if ( is_page() ) {
 			$more = sprintf( '<a href="%1$s">%2$s</a>', get_permalink( get_the_ID() ), __( '...', 'lands' ) );

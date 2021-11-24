@@ -73,7 +73,7 @@
 							$query->the_post();
 							?>
 					<li>
-						<article>
+						<article class="bg-gray-300 text-black h-96 flex flex-col justify-between shadow-2xl rounded">
 							<div class="article__img">
 								<?php
 								if ( $post_cat === 'press' ) {
@@ -88,7 +88,7 @@
 
 								?>
 							</div>
-							<div class="article__excerpt">
+							<div class="article__excerpt p-2">
 								<?php the_excerpt(); ?>
 							</div>
 						</article>
