@@ -28,14 +28,13 @@ $query = new WP_Query( $args );
 ?>
 <div class="side__container h-full flex flex-col justify-between">
 	<div class="side__top">
-	<h4>Popular Articles</h4>
 	<ul>
 		<?php
 		if ( $query->have_posts() ) :
 			while ( $query->have_posts() ) :
 				$query->the_post();
 				?>
-			<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+			<li class="list-none rounded text-center no-underline bg-yellow-200 hover:bg-yellow-300"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 			<?php endwhile; else : ?>
 				<?php echo esc_html_e( 'Sorry, no articles available', 'lands' ); ?>
 			<?php endif; ?>
