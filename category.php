@@ -75,29 +75,29 @@
 					<li>
 						<article class="bg-gray-300 text-black h-96 flex flex-col justify-between shadow-2xl rounded">
 							<div class="article__img">
-								<?php
-								if ( $post_cat === 'press' ) {
-									?>
-										<span class="material-icons">notifications</span> 
-										<?php
-								} elseif ( $post_cat !== 'press' ) {
-									the_post_thumbnail();
-								} else {
-									echo 'No thumbnail on this content';
-								}
-
+							<?php
+							if ( 'press' === $post_cat ) {
 								?>
+										<span class="material-icons">notifications</span> 
+								<?php
+							} elseif ( 'press' !== $post_cat ) {
+								the_post_thumbnail();
+							} else {
+										echo 'No thumbnail on this content';
+							}
+
+							?>
 							</div>
 							<div class="article__excerpt p-2">
-								<?php the_excerpt(); ?>
+							<?php the_excerpt(); ?>
 							</div>
 						</article>
 					</li>
 							<?php
-					endwhile; else :
+						endwhile; else :
 							echo esc_html_e( 'Sorry no posts for this category', 'lands' );
-					endif;
-					?>
+						endif;
+						?>
 				</ul>
 			</div>
 		</div>
