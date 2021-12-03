@@ -31,9 +31,9 @@
 					<span>by the Commission</span>
 				</li>
 				<li>
-					<span>Farms Inspected For</span>
-					<div class="statistics__counter" data-start-at="0" data-end-at="99">{}</div>
-					<span>year lease</span></span>
+					<span>Farms Inspected</span>
+					<div class="statistics__counter" data-start-at="0" data-end-at="537">{}</div>
+					<span>for 99 year lease</span>
 				</li>
 			</ul>
 		</div>

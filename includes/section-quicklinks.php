@@ -18,11 +18,11 @@
 		<div class="quicklinks__layout">
 			<ul class="quicklinks__list">
 				<li class="quicklinks__link">
-					<a href="http://zlc.local/submit-form/">
+					<a href="http://zlc.local/complaints-and-corrections/">
 						<div class="quicklinks__image">
 							<span class="material-icons">description</span>
 						</div>
-						<h4>Change your title details</h4>
+						<h4>Lodge a Complaint/Dispute</h4>
 					</a>
 				</li>
 				<li class="quicklinks__link">
@@ -30,15 +30,15 @@
 						<div class="quicklinks__image">
 							<span class="material-icons">location_searching</span>
 						</div>
-						<h4>Find information on a property</h4>
+						<h4>Track your Complaint/Dispute</h4>
 					</a>
 				</li>
 				<li class="quicklinks__link">
-					<a href="http://zlc.local/submit-form/">
+					<a href="http://zlc.local/complaints-and-corrections/">
 						<div class="quicklinks__image">
 							<span class="material-icons">file_present</span>
 						</div>
-						<h4>Get a copy of your title</h4>
+						<h4>How to lodge a Complaint</h4>
 					</a>
 				</li>
 			</ul>

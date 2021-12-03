@@ -56,10 +56,11 @@
 			<div class="page__content rounded-r-lg">
 				<?php the_content(); ?>
 			</div>
+			<!-- Comments Section here -->
 			<div class="comments__section container-lg">
-				<?php if ( comments_open() ) : ?>
-					<?php comments_template( '/short-comments.php' ); ?>
-				<?php endif; ?>
+				<?php // if ( comments_open() ) : ?>
+					<?php // comments_template( '/short-comments.php' ); ?>
+				<?php // endif; ?>
 			</div>
 			</div>
 		</div>
