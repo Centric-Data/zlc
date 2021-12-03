@@ -21,7 +21,7 @@ define( 'PLUGINS_DIR_URL', plugin_dir_url( __FILE__ ) );
 
 
 function ls_loadcss() {
-	wp_register_style( 'landscss', get_template_directory_uri() . '/css/lands.css', array(), '1.0', 'all' );
+	 wp_register_style( 'landscss', get_template_directory_uri() . '/css/lands.css', array(), '1.0', 'all' );
 	wp_register_style( 'materialfonts', 'https://fonts.googleapis.com/icon?family=Material+Icons', array(), '1.0', 'all' );
 	wp_register_style( 'sweetalertcss', get_template_directory_uri() . '/css/sweetalert.min.css', array(), '2.0', 'all' );
 	wp_register_style( 'bootstrapcss', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '5.0.2', 'all' );
@@ -156,7 +156,7 @@ add_filter( 'excerpt_more', 'ls_excerpt_more' );
  * @return void
  */
 function ls_breadcrumbs() {
-	echo '<ul class="page__breadcrumbs">';
+	 echo '<ul class="page__breadcrumbs">';
 	echo '<li>';
 	echo '<a href="' . esc_url( home_url() ) . '" rel="nofollow">Home</a>';
 	if ( is_category() || is_single() ) {
@@ -185,7 +185,6 @@ function ls_breadcrumbs() {
  * @return void
  */
 function ls_custom_admin_footer() {
-
 	add_filter( 'admin_footer_text', 'ls_edit_text', 11 );
 
 }
@@ -254,6 +253,7 @@ add_action( 'wp_footer', 'ls_inline_script', 0 );
  * Add Walker Class to the menu.
  */
 class LS_Menu_Walker extends Walker_Nav_Menu {
+
 	private $current_item;
 	private $dropdown_menu_alignment_values = array(
 		'dropdown-menu-start',
@@ -324,6 +324,15 @@ class LS_Menu_Walker extends Walker_Nav_Menu {
 
 		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 	}
+}
+
+
+add_action( 'init', 'ls_remove_comment_support', 100 );
+/**
+ * Remove comments on pages.
+ */
+function ls_remove_comment_support() {
+	remove_post_type_support( 'page', 'comments' );
 }
 
 /**

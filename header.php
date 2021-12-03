@@ -56,7 +56,7 @@
 	</div>
 	<div class="main__menu">
 		<div class="main__menu--container row-ls">
-			<div class="main__logo">
+			<div class="main__logo w-1/3">
 				<?php
 				if ( has_custom_logo() ) {
 					the_custom_logo();
